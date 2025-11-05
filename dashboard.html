@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Prism - Dashboard</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<nav class="topbar">
+			<ul>
+				<li>
+					<a href="index.html">
+						<img src="Assets/prism2.png" alt="PrismLogo" />
+					</a>
+				</li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="profile.html">Profile</a></li>
+			</ul>
+		</nav>
+		<h1 class="dashboard-title">Dashboard</h1>
+		<div class="dashboard-content">
+			<!-- Button 1 -->
+			<div class="category-container">
+				<button class="add-category" onclick="addCategory(this)">+</button>
+
+				<div class="menu">
+					<select
+						name="categories"
+						id="categories1"
+						onChange="checkSelection(this)"
+					>
+						<option value="none">None</option>
+						<option value="ush">U.S. History</option>
+						<option value="placeholder">N/A</option>
+						<option value="placeholder">N/A</option>
+						<option value="placeholder">N/A</option>
+					</select>
+				</div>
+
+				<div class="category-card">
+					<h2>U.S. History</h2>
+					<img src="Assets/blank.png" alt="Placeholder Image" />
+					<p>progress bar</p>
+					<button
+						class="continue"
+						onclick="window.location.href='category.html'"
+					>
+						Continue
+					</button>
+				</div>
+			</div>
+
+			<!-- Button 2 -->
+			<div class="category-container">
+				<button class="add-category" onclick="addCategory(this)">+</button>
+
+				<div class="menu">
+					<select
+						name="categories"
+						id="categories1"
+						onChange="checkSelection(this)"
+					>
+						<option value="none">None</option>
+						<option value="ush">U.S. History</option>
+						<option value="placeholder">N/A</option>
+						<option value="placeholder">N/A</option>
+						<option value="placeholder">N/A</option>
+					</select>
+				</div>
+
+				<div class="category-card">
+					<h2>U.S. History</h2>
+					<img src="Assets/blank.png" alt="Placeholder Image" />
+					<p>progress bar</p>
+					<button
+						class="continue"
+						onclick="window.location.href='category.html'"
+					>
+						Continue
+					</button>
+				</div>
+			</div>
+
+			<!-- Button 3 -->
+			<div class="category-container">
+				<button class="add-category" onclick="addCategory(this)">+</button>
+
+				<div class="menu">
+					<select
+						name="categories"
+						id="categories1"
+						onChange="checkSelection(this)"
+					>
+						<option value="none">None</option>
+						<option value="ush">U.S. History</option>
+						<option value="placeholder">N/A</option>
+						<option value="placeholder">N/A</option>
+						<option value="placeholder">N/A</option>
+					</select>
+				</div>
+
+				<div class="category-card">
+					<h2>U.S. History</h2>
+					<img src="Assets/blank.png" alt="Placeholder Image" />
+					<p>progress bar</p>
+					<button
+						class="continue"
+						onclick="window.location.href='category.html'"
+					>
+						Continue
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
