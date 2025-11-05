@@ -1,5 +1,6 @@
 # Prism
 
+![alt text](Assets/prism2.png)
 **Personalized Learning for Every Student**
 
 Prism is an adaptive learning platform that personalizes education by adjusting lessons to match each student's strengths and weaknesses. It dynamically adapts the content difficulty, pacing, and lesson type based on user performance and learning style.
@@ -14,17 +15,17 @@ Traditional education often follows a one-size-fits-all model that overlooks ind
 
 ## Features
 
-- Adaptive lesson engine that modifies content based on performance  
-- Personalized progress tracking to monitor mastery and improvement  
-- Modular lesson structure for scalability across subjects and units  
-- Clean, interactive user interface inspired by modern educational platforms  
-- Support for both rule-based and AI-driven personalization  
+- Adaptive lesson engine that modifies content based on performance
+- Personalized progress tracking to monitor mastery and improvement
+- Modular lesson structure for scalability across subjects and units
+- Clean, interactive user interface inspired by modern educational platforms
+- Support for both rule-based and AI-driven personalization
 - Responsive web design for compatibility across devices
 
 ---
 
 ## Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript  
+- **Frontend:** HTML, CSS, JavaScript
 
 ---

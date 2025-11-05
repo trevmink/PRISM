@@ -3,9 +3,54 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
 		<title>PRISM - Lesson</title>
 	</head>
-	<body>
-		<p>This is the lesson page.</p>
+	<nav class="topbar">
+		<ul>
+			<li>
+				<a href="index.html">
+					<img src="Assets/prism2.png" alt="PrismLogo" />
+				</a>
+			</li>
+			<li>
+				<a
+					href="index.html"
+					onclick="return confirm('Leaving will reset unsaved lesson progress. Are you sure?')"
+					>Home</a
+				>
+			</li>
+			<li>
+				<a
+					href="profile.html"
+					onclick="return confirm('Leaving will reset unsaved lesson progress. Are you sure?')"
+					>Profile</a
+				>
+			</li>
+			<li>
+				<a
+					href="dashboard.html"
+					onclick="return confirm('Leaving will reset unsaved lesson progress. Are you sure?')"
+					>Dashboard</a
+				>
+			</li>
+		</ul>
+	</nav>
+
+	<body class="lesson-body">
+		<div class="lesson-content">
+			<h1 class="lesson-title">Lesson Title</h1>
+			<h2 class="lesson-question" id="lesson-question">Question goes here.</h2>
+			<div class="lesson-answers" id="lesson-answers">
+				<button class="answer-button">Answer 1</button>
+				<button class="answer-button">Answer 2</button>
+				<button class="answer-button">Answer 3</button>
+				<button class="answer-button">Answer 4</button>
+			</div>
+			<div class="lesson-navigation">
+				<button class="nav-button" id="nav-button">Next</button>
+			</div>
+		</div>
+		<script src="lesson.js"></script>
 	</body>
 </html>
