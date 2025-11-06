@@ -4,9 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Prism - Lesson Category</title>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="Styles/main.css" />
+		<link rel="stylesheet" href="Styles/category.css" />
 	</head>
-	<body>
 		<nav class="topbar">
 			<ul>
 				<li>
@@ -19,17 +19,42 @@
 				<li><a href="dashboard.html">Dashboard</a></li>
 			</ul>
 		</nav>
-
-		<div class="strengths-container">
-			<h1 class="strengths-title">Strengths</h1>
-			<img
-				class="strengths-image"
-				src="Assets/blank.png"
-				alt="StrengthsImage"
-			/>
+		<div class="category-page">
+		<div class="performance-container">
+				<div class="strengths-container">
+					<h1 class="strengths-title">Strengths</h1>
+					<img
+						class="strengths-image"
+						src="Assets/blank.png"
+						alt="StrengthsImage"
+					/>
+				</div>
+				<p class="strengths-description"> Description of strengths goes here.</p>
+				
+				<div class="weaknesses-container">
+					<h1 class="weaknesses-title">Weaknesses</h1>
+					<img
+						class="weaknesses-image"
+						src="Assets/blank.png"
+						alt="WeaknessesImage"
+					/>
+				</div>
+				<p class="weaknesses-description"> Description of weaknesses goes here.</p>
 		</div>
-		<button class="start-lesson-button" onclick="location.href='lesson.html'">
-			Start Lesson
-		</button>
+
+		<div class="lessons-container">
+			<ul class="lessons-list">
+				<li class="lesson-item">
+					<a href="lesson.html">Lesson 1: Introduction to the Topic</a>
+				</li>
+				<li class="lesson-item">
+					<a href="lesson.html">Lesson 2: Intermediate Concepts</a>
+				</li>
+				<li class="lesson-item">
+					<a href="lesson.html">Lesson 3: Advanced Techniques</a>
+				</li>
+			</ul>
+		</div>
+		</div>
 	</body>
 </html>

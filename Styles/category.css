@@ -1,0 +1,74 @@
+/* Category Page Styles */
+.strengths-title,
+.weaknesses-title {
+	text-align: left;
+	margin-top: 1rem;
+	margin-left: 0.5rem;
+	font-size: 2rem;
+	color: rgb(50, 50, 50);
+}
+
+.strengths-image,
+.weaknesses-image {
+	width: min(5vh, 8rem);
+	height: min(5vh, 8rem);
+	margin-top: 1.5rem;
+}
+
+.strengths-container,
+.weaknesses-container {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+.strengths-description,
+.weaknesses-description {
+	margin: 1rem 0.5rem 5rem 0.5rem;
+	font-size: 1.2rem;
+	color: rgb(80, 80, 80);
+	line-height: 1.5em;
+	max-width: 60%;
+}
+
+/* Parent flex container for left/right layout */
+.category-page {
+	display: flex;
+	gap: 25rem; /* space between left and right */
+	min-height: 100vh;
+}
+
+.performance-container {
+	flex: 0 0 22.5%;
+	display: flex;
+	flex-direction: column;
+	background-color: #9792ec;
+	padding-left: 1rem;
+}
+
+.lessons-container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 1rem;
+}
+
+.lessons-list {
+	list-style: none;
+	padding: 0;
+}
+
+.lesson-item {
+	margin-bottom: 1rem;
+}
+
+.lesson-item a {
+	text-decoration: none;
+	font-size: 1.2rem;
+	color: rgb(50, 50, 50);
+}
+
+.lesson-item a:hover {
+	color: rgb(120, 115, 205);
+}

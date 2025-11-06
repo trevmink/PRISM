@@ -1,0 +1,57 @@
+/* Home Page Styles */
+.main-image {
+	display: block;
+	margin: 0 auto;
+	max-width: 15vw;
+	max-height: 15vw;
+	height: auto;
+}
+
+.welcome-message {
+	display: block;
+	text-align: center;
+	margin-top: -2rem;
+	font-size: 2rem;
+	color: rgb(50, 50, 50);
+}
+
+.getStarted {
+	display: block;
+	margin: 1rem auto 0 auto;
+	font-size: 1.5rem;
+	font-family: roundo, sans-serif;
+	text-decoration: none;
+	border: none;
+	padding: 0.5rem 1rem;
+	background-color: rgb(151, 146, 236);
+	color: white;
+	border-radius: 2rem;
+	cursor: pointer;
+}
+
+.getStarted:hover {
+	background-color: rgb(120, 115, 205);
+	transform: scale(1.05);
+}
+
+.getStarted:active {
+	transform: scale(0.95);
+}
+
+.description {
+	display: block;
+	text-align: center;
+	margin: 1rem auto;
+	max-width: 60%;
+	font-size: 1.2rem;
+	color: rgb(80, 80, 80);
+	line-height: 1.5em;
+	background-color: #ebf6ff;
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+}
+
+.description b {
+	color: rgb(151, 146, 236);
+	font-weight: bold;
+}

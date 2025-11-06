@@ -1,0 +1,93 @@
+/* Lesson Page Styles */
+.lesson-body {
+	background: #2f2d58;
+}
+
+.lesson-content {
+	background: white;
+	width: 90%;
+	max-width: 37.5rem;
+	margin: 6.25rem auto 0;
+	border-radius: 0.625rem;
+	padding: 1.875rem;
+}
+
+.lesson-title {
+	text-align: left;
+	font-size: 3rem;
+	color: rgb(50, 50, 50);
+	margin-bottom: 1.25rem;
+	font-weight: bold;
+	border-bottom: 0.0625rem solid black;
+}
+
+.lesson-question {
+	font-size: 1.5rem;
+	color: rgb(80, 80, 80);
+	margin-bottom: 1.875rem;
+}
+
+.lesson-answers {
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+}
+
+.answer-button {
+	font-size: 1.2rem;
+	padding: 0.625rem;
+	border: none;
+	border-radius: 0.5rem;
+	background-color: #9792ec;
+	color: white;
+	cursor: pointer;
+	text-align: left;
+}
+
+.answer-button:hover:not([disabled]) {
+	background-color: #7a75d1;
+	transform: scale(1.02);
+}
+
+.answer-button:disabled {
+	cursor: no-drop;
+	opacity: 0.7;
+}
+
+.answer-button:active {
+	transform: scale(0.95);
+}
+
+.lesson-navigation {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1.875rem;
+}
+
+.nav-button {
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 0.5rem;
+	background-color: #9792ec;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+
+.nav-button:hover {
+	background-color: #7a75d1;
+	transform: scale(1.02);
+}
+
+.nav-button:active {
+	transform: scale(0.95);
+}
+
+.correct {
+	background-color: #4caf50 !important;
+}
+
+.incorrect {
+	background-color: #f44336 !important;
+}

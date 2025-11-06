@@ -1,0 +1,117 @@
+/* Dashboard Page Styles */
+.dashboard-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5vw;
+	margin-top: 10vh;
+	padding: 0 5vw;
+	flex-wrap: wrap;
+}
+
+.add-category {
+	width: min(20vw, 10rem);
+	height: min(20vw, 10rem);
+	font-size: clamp(2.5rem, 8vw, 5rem);
+	border: none;
+	border-radius: 2rem;
+	background-color: rgb(200, 200, 200);
+	color: rgb(50, 50, 50);
+	cursor: pointer;
+	text-align: center;
+}
+
+.add-category:hover {
+	background-color: rgb(170, 170, 170);
+	transform: scale(1.1);
+}
+
+.add-category:active {
+	transform: scale(0.95);
+}
+
+/* hidden dropdown menu */
+.menu {
+	display: none;
+	border: none;
+}
+
+.menu select {
+	width: inherit;
+	font-size: clamp(1rem, 1.5vw, 1.8rem);
+	font: inherit;
+	background-color: rgb(200, 200, 200);
+	color: rgb(50, 50, 50);
+	cursor: pointer;
+	text-align: center;
+	border: none;
+	outline: none;
+	border-radius: 1.5rem;
+}
+
+.menu select:hover {
+	background-color: rgb(170, 170, 170);
+	transform: scale(1.025);
+}
+
+.menu option {
+	background-color: white;
+	border: none;
+}
+
+.dashboard-title {
+	text-align: center;
+	margin-top: 1rem;
+	font-size: 2rem;
+	color: rgb(50, 50, 50);
+}
+
+.category-card {
+	display: none;
+	text-align: center;
+	border-radius: 1rem;
+	padding: 0rem;
+	background-color: rgb(240, 240, 240);
+	transform: scale(1.1);
+}
+
+.category-card img {
+	margin-bottom: 0.5rem;
+	max-width: 50%;
+	height: auto;
+}
+
+.category-card p {
+	margin: 0.5rem 0;
+	color: rgb(80, 80, 80);
+}
+
+.category-card .continue {
+	margin-top: 0.5rem;
+	font-size: clamp(0.75rem, 1vw, 1.25rem);
+	font-family: roundo, sans-serif;
+	text-decoration: none;
+	border: none;
+	padding: 0.5rem 1rem;
+	background-color: rgb(151, 146, 236);
+	color: white;
+	border-radius: 1rem;
+	cursor: pointer;
+}
+
+.category-container {
+	position: relative;
+	width: min(20vh, 10rem);
+	height: min(30vh, 18rem);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.category-container > * {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

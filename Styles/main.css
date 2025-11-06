@@ -1,0 +1,57 @@
+/* Reset and global styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "Roundo";
+	src: url(Assets/Roundo-Regular.ttf);
+}
+
+body {
+	min-height: 100vh;
+	background-color: rgb(255, 255, 255);
+	font-family: "Roundo", sans-serif;
+	font-size: 1rem;
+}
+
+/* Top Navigation Bar Styles */
+.topbar {
+	background-color: rgb(50, 50, 50);
+	width: 100%;
+}
+
+.topbar ul {
+	width: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.topbar li {
+	height: 3rem;
+}
+
+.topbar a {
+	height: 100%;
+	padding: 0 2rem;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	color: white;
+}
+
+.topbar li img {
+	height: 3rem;
+}
+
+.topbar a:hover {
+	background-color: rgb(113, 113, 113);
+}
+
+.topbar li:first-child {
+	margin-right: auto;
+}
