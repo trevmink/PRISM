@@ -99,6 +99,10 @@
 	cursor: pointer;
 }
 
+.category-card .continue:hover {
+	background-color: rgb(120, 115, 210);
+}
+
 .category-container {
 	position: relative;
 	width: min(20vh, 10rem);

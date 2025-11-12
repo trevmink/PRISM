@@ -2,10 +2,26 @@ const US_HISTORY = [
 	{
 		question: "Who was the first President of the United States?",
 		answers: [
-			{ text: "George Washington", isCorrect: true },
-			{ text: "Thomas Jefferson", isCorrect: false },
-			{ text: "Abraham Lincoln", isCorrect: false },
-			{ text: "John Adams", isCorrect: false },
+			{
+				text: "George Washington",
+				isCorrect: true,
+				reason: "CORRECT, He was the first president.",
+			},
+			{
+				text: "Thomas Jefferson",
+				isCorrect: false,
+				reason: "WRONG, He was the third president.",
+			},
+			{
+				text: "Abraham Lincoln",
+				isCorrect: false,
+				reason: "WRONG, He was the 16th president.",
+			},
+			{
+				text: "John Adams",
+				isCorrect: false,
+				reason: "WRONG, He was the second president.",
+			},
 		],
 	},
 	{
@@ -48,10 +64,14 @@ function showQuestion() {
 	// For each answer, create a button
 	currentQuestion.answers.forEach((answer) => {
 		const button = document.createElement("button");
+		const reason = document.createElement("p");
 		button.textContent = answer.text;
+		button.dataset.reason = answer.reason;
 		// Adds styling class to the each answer button
 		button.classList.add("answer-button");
+		reason.classList.add("reason");
 		lessonButtonElement.appendChild(button);
+		lessonButtonElement.appendChild(reason);
 
 		if (answer.isCorrect) {
 			// Adds the "correct" data attribute to the button
@@ -75,12 +95,14 @@ function selectAnswer(event) {
 		score++;
 	} else {
 		selectedButton.classList.add("incorrect");
+		selectedButton.nextSibling.textContent = selectedButton.dataset.reason; // Show reason for incorrect answer
 	}
 
 	// Loops through all answer buttons to show correct answers and disable them
 	Array.from(lessonButtonElement.children).forEach((button) => {
 		if (button.dataset.correct === "true") {
 			button.classList.add("correct");
+			button.nextSibling.textContent = button.dataset.reason; // Show reason for correct answer
 		}
 		button.disabled = true;
 	});
