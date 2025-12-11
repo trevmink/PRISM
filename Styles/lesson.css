@@ -84,6 +84,25 @@
 	transform: scale(0.95);
 }
 
+.exit-button {
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 0.5rem;
+	background-color: #9792ec;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+
+.exit-button:hover {
+	background-color: #7a75d1;
+	transform: scale(1.02);
+}
+
+.exit-button:active {
+	transform: scale(0.95);
+}
 .correct {
 	background-color: #4caf50 !important;
 }

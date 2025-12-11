@@ -1,4 +1,4 @@
-const US_HISTORY = [
+const US_HISTORY1 = [
 	{
 		question: "Who was the first President of the United States?",
 		answers: [
@@ -35,17 +35,34 @@ const US_HISTORY = [
 	},
 ];
 
+const PARAMETERS = new URLSearchParams(window.location.search);
+const LESSON_TOPIC = PARAMETERS.get("topic");
+let lessonTitle = "placeholder";
+let lessonContent = "placeholder";
+
+if (LESSON_TOPIC == "US1") {
+	// US History Lesson 1
+	lessonTitle = "Lesson 1: Introduction to US History";
+	lessonContent = US_HISTORY1;
+} else if (LESSON_TOPIC == "US2") {
+	// US History Lesson 2
+	lessonTitle = "Lesson 2: The American Revolution";
+} else {
+	lessonTitle = "Lesson Not Found";
+}
+
 const lessonTitleElement = document.querySelector(".lesson-title");
 const questionElement = document.getElementById("lesson-question");
 const lessonButtonElement = document.getElementById("lesson-answers");
 const navButtonElement = document.getElementById("nav-button");
+const exitButtonElement = document.getElementById("exit-button");
 
 let currentQuestionIndex = 0;
 let score = 0;
 
 // ADD PARAMETERS TO SELECT LESSON TOPIC/UNIT
 function startLesson() {
-	lessonTitleElement.textContent = "US History Lesson"; // REPLACE THIS LATER WITH A VAR SO IT CAN CHANGE BASED ON LESSON
+	lessonTitleElement.textContent = lessonTitle; // REPLACE THIS LATER WITH A VAR SO IT CAN CHANGE BASED ON LESSON
 	currentQuestionIndex = 0;
 	score = 0;
 	navButtonElement.textContent = "Next";
@@ -56,7 +73,7 @@ function startLesson() {
 
 function showQuestion() {
 	resetState();
-	let currentQuestion = US_HISTORY[currentQuestionIndex];
+	let currentQuestion = lessonContent[currentQuestionIndex];
 	let questionNo = currentQuestionIndex + 1;
 	questionElement.textContent = questionNo + ". " + currentQuestion.question;
 	navButtonElement.style.display = "none";
@@ -117,14 +134,15 @@ function resetState() {
 
 function showScore() {
 	resetState();
-	questionElement.textContent = `You scored ${score} out of ${US_HISTORY.length}!`;
+	questionElement.textContent = `You scored ${score} out of ${lessonContent.length}!`;
 	navButtonElement.textContent = "Restart Lesson";
 	navButtonElement.style.display = "block";
+	exitButtonElement.style.display = "block";
 }
 
 function handleNextButton() {
 	currentQuestionIndex++;
-	if (currentQuestionIndex < US_HISTORY.length) {
+	if (currentQuestionIndex < lessonContent.length) {
 		showQuestion();
 	} else {
 		showScore();
@@ -132,7 +150,7 @@ function handleNextButton() {
 }
 
 navButtonElement.addEventListener("click", () => {
-	if (currentQuestionIndex < US_HISTORY.length) {
+	if (currentQuestionIndex < lessonContent.length) {
 		handleNextButton();
 	} else {
 		startLesson();

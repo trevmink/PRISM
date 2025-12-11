@@ -1,0 +1,47 @@
+.separate {
+	display: flex;
+	gap: 100px;
+}
+
+.left-bar {
+	background-color: #2f2d58;
+	color: white;
+	max-width: 25%;
+	min-height: 100vh;
+	padding-right: 5%;
+}
+
+.user-info {
+	display: flex;
+}
+
+.user-info img {
+	max-width: 45px;
+}
+
+.quest-title {
+	margin-top: 25%;
+}
+
+.quests {
+	text-align: center;
+	background-color: #9792ec;
+	list-style-position: inside;
+	border-radius: 12.5px;
+}
+
+.quests ol {
+	padding-bottom: 2vh;
+}
+
+.user-level {
+	text-align: center;
+}
+
+.userlevel {
+	margin-top: 75%;
+}
+
+.streak {
+	text-align: center;
+}
