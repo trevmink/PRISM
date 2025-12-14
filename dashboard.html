@@ -21,21 +21,17 @@
 		</nav>
 		<h1 class="dashboard-title">Dashboard</h1>
 		<section class="dashboard-content">
-			<!-- Button 1 -->
-			<div class="category-container">
-				<button class="add-category" onclick="addCategory(this)">+</button>
+			<!-- Category 1 -->
+			<div class="category-container" data-category-slot="1">
+				<button class="add-category">+</button>
 
 				<div class="menu">
-					<select
-						name="categories"
-						id="categories1"
-						onChange="checkSelection(this)"
-					>
-						<option value="none">None</option>
+					<select name="categories" class="category-select">
+						<option value="none" disabled selected>None</option>
 						<option value="ush">U.S. History</option>
-						<option value="placeholder">N/A</option>
-						<option value="placeholder">N/A</option>
-						<option value="placeholder">N/A</option>
+						<option value="placeholder" disabled>N/A</option>
+						<option value="placeholder" disabled>N/A</option>
+						<option value="placeholder" disabled>N/A</option>
 					</select>
 				</div>
 
@@ -52,21 +48,17 @@
 				</div>
 			</div>
 
-			<!-- Button 2 -->
-			<div class="category-container">
-				<button class="add-category" onclick="addCategory(this)">+</button>
+			<!-- Category 2 -->
+			<div class="category-container" data-category-slot="2">
+				<button class="add-category">+</button>
 
 				<div class="menu">
-					<select
-						name="categories"
-						id="categories2"
-						onChange="checkSelection(this)"
-					>
-						<option value="none">None</option>
+					<select name="categories" class="category-select">
+						<option value="none" disabled selected>None</option>
 						<option value="ush">U.S. History</option>
-						<option value="placeholder">N/A</option>
-						<option value="placeholder">N/A</option>
-						<option value="placeholder">N/A</option>
+						<option value="placeholder" disabled>N/A</option>
+						<option value="placeholder" disabled>N/A</option>
+						<option value="placeholder" disabled>N/A</option>
 					</select>
 				</div>
 
@@ -83,21 +75,17 @@
 				</div>
 			</div>
 
-			<!-- Button 3 -->
-			<div class="category-container">
-				<button class="add-category" onclick="addCategory(this)">+</button>
+			<!-- Category 3 -->
+			<div class="category-container" data-category-slot="3">
+				<button class="add-category">+</button>
 
 				<div class="menu">
-					<select
-						name="categories"
-						id="categories3"
-						onChange="checkSelection(this)"
-					>
-						<option value="none">None</option>
+					<select name="categories" class="category-select">
+						<option value="none" disabled selected>None</option>
 						<option value="ush">U.S. History</option>
-						<option value="placeholder">N/A</option>
-						<option value="placeholder">N/A</option>
-						<option value="placeholder">N/A</option>
+						<option value="placeholder" disabled>N/A</option>
+						<option value="placeholder" disabled>N/A</option>
+						<option value="placeholder" disabled>N/A</option>
 					</select>
 				</div>
 
@@ -115,8 +103,7 @@
 			</div>
 		</section>
 
-		<script src="javascript/menu.js"></script>
-		<script type="module" src="javascript/firebase.js"></script>
+		<script type="module" src="javascript/menu.js"></script>
 		<script type="module" src="javascript/auth.js"></script>
 	</body>
 </html>
