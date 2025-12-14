@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Prism - Login</title>
+		<link rel="stylesheet" href="Styles/main.css" />
+		<link rel="stylesheet" href="Styles/login.css" />
+	</head>
+	<body>
+		<nav class="topbar">
+			<ul>
+				<li>
+					<a href="index.html">
+						<img src="Assets/prism2.png" alt="PrismLogo" />
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="login-page">
+			<div class="login-card">
+				<h1>Prism Login</h1>
+				<input type="email" id="emailInput" placeholder="Email" />
+				<input type="password" id="passwordInput" placeholder="Password" />
+				<button id="signupBtn">Sign Up</button>
+				<button
+					id="getStartedBtn"
+					onclick="window.location.href='dashboard.html'"
+				>
+					Continue to Dashboard
+				</button>
+				<button id="loginBtn">Login</button>
+				<button id="logoutBtn" style="display: none">Logout</button>
+				<p id="userEmail"></p>
+				<!-- for displaying "Logged in as: user@email.com" -->
+				<p id="status"></p>
+				<!-- for messages like "Logged in!" -->
+			</div>
+		</div>
+	</body>
+	<script type="module" src="javascript/firebase.js"></script>
+	<script type="module" src="javascript/auth.js"></script>
+</html>

@@ -19,5 +19,14 @@
 		"titleBar.inactiveForeground": "#e7e7e799"
 	},
 	"peacock.color": "#06101f",
-	"cSpell.words": ["checkmark", "Roundo", "topbar", "userlevel"]
+	"cSpell.words": [
+		"appspot",
+		"checkmark",
+		"Feigcg",
+		"firebaseapp",
+		"Firestore",
+		"Roundo",
+		"topbar",
+		"userlevel"
+	]
 }
