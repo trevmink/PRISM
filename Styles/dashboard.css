@@ -101,6 +101,7 @@
 
 .category-card .continue:hover {
 	background-color: rgb(120, 115, 210);
+	color: black;
 }
 
 .category-container {

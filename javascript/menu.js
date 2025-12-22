@@ -42,6 +42,7 @@ async function checkSelection(select) {
 		[`categories.${value}`]: {
 			selected: true,
 			currentUnit: null,
+			currentLesson: null,
 			progress: 0,
 			createdAt: new Date(),
 		},

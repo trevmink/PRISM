@@ -46,9 +46,10 @@
 	font-size: 1.2rem;
 	color: rgb(80, 80, 80);
 	line-height: 1.5em;
-	background-color: #ebf6ff;
+	background-color: #ffffff;
 	padding: 1.5rem;
 	border-radius: 0.5rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .description b {
