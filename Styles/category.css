@@ -34,7 +34,7 @@
 /* Parent flex container for left/right layout */
 .category-page {
 	display: flex;
-	gap: 25rem; /* space between left and right */
+	gap: 5rem; /* space between left and right */
 	min-height: 100vh;
 }
 
@@ -55,6 +55,7 @@
 }
 
 .lessons-list {
+	margin-top: 1rem;
 	list-style: none;
 	padding: 0;
 }
@@ -82,7 +83,6 @@
 
 .unit-title {
 	font-size: 2.5rem;
-	margin-bottom: 1rem;
 	color: rgb(40, 40, 40);
 	align-self: left;
 }

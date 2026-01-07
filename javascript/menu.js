@@ -43,6 +43,8 @@ async function checkSelection(select) {
 			selected: true,
 			currentUnit: null,
 			currentLesson: null,
+			completedUnits: [],
+			completedLessons: [],
 			progress: 0,
 			createdAt: new Date(),
 		},

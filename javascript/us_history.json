@@ -1,0 +1,52 @@
+{
+	"ush": {
+		"title": "U.S. History",
+		"units": [
+			{
+				"id": 1,
+				"title": "Colonization & Early America",
+				"description": "Indigenous societies, European exploration, and early settlements."
+			},
+			{
+				"id": 2,
+				"title": "Revolution & Independence",
+				"description": "Causes, events, and consequences of the American Revolution."
+			},
+			{
+				"id": 3,
+				"title": "Constitution & Federalism",
+				"description": "The Constitution, Bill of Rights, and formation of the federal government."
+			},
+			{
+				"id": 4,
+				"title": "Westward Expansion",
+				"description": "Manifest Destiny, territorial growth, and Native American displacement."
+			},
+			{
+				"id": 5,
+				"title": "Civil War & Reconstruction",
+				"description": "Slavery, sectionalism, the Civil War, and Reconstruction."
+			},
+			{
+				"id": 6,
+				"title": "Industrialization",
+				"description": "Big business, immigration, urbanization, and labor movements."
+			},
+			{
+				"id": 7,
+				"title": "Progressive Era",
+				"description": "Reforms addressing political corruption and social injustice."
+			},
+			{
+				"id": 8,
+				"title": "World Wars",
+				"description": "U.S. involvement in World War I and World War II."
+			},
+			{
+				"id": 9,
+				"title": "Cold War & Modern America",
+				"description": "Cold War tensions, civil rights, and contemporary America."
+			}
+		]
+	}
+}
