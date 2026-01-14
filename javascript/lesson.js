@@ -1,56 +1,65 @@
-const US_HISTORY1 = [
-	{
-		question: "Who was the first President of the United States?",
-		answers: [
-			{
-				text: "George Washington",
-				isCorrect: true,
-				reason: "CORRECT, He was the first president.",
-			},
-			{
-				text: "Thomas Jefferson",
-				isCorrect: false,
-				reason: "WRONG, He was the third president.",
-			},
-			{
-				text: "Abraham Lincoln",
-				isCorrect: false,
-				reason: "WRONG, He was the 16th president.",
-			},
-			{
-				text: "John Adams",
-				isCorrect: false,
-				reason: "WRONG, He was the second president.",
-			},
-		],
-	},
-	{
-		question: "What year did the United States declare independence?",
-		answers: [
-			{ text: "1776", isCorrect: true },
-			{ text: "1781", isCorrect: false },
-			{ text: "1787", isCorrect: false },
-			{ text: "1791", isCorrect: false },
-		],
-	},
-];
+import { auth, db } from "./firebase.js";
+import {
+	doc,
+	getDoc,
+	updateDoc,
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+
+let currentUser = null;
+let category = null;
+let currentLesson = null;
+let currentUnit = null;
+
+// Track auth state
+onAuthStateChanged(auth, async (user) => {
+	if (!user) {
+		window.location.href = "login.html";
+		return;
+	}
+	currentUser = user;
+
+	const snap = await getDoc(doc(db, "users", currentUser.uid));
+	const userData = snap.data();
+
+	const categories = userData?.categories || {};
+
+	// find selected category
+	for (const c in categories) {
+		if (categories[c]?.selected === true) {
+			category = c;
+			console.log("CATEGORY", category);
+
+			currentUnit = categories[c]?.currentUnit;
+			console.log("CURRENT UNIT", currentUnit);
+
+			currentLesson = categories[c]?.currentLesson;
+			console.log("CURRENT LESSON", currentLesson);
+			break;
+		}
+	}
+
+	const lessonData = await loadUSH(currentUnit, currentLesson);
+	console.log("LESSON DATA", lessonData);
+
+	lessonTitle =
+		lessonData.title ?? `Unit ${currentUnit} • Lesson ${currentLesson}`;
+	lessonContent = lessonData.questions ?? lessonData; // depends on your JSON shape
+	startLesson();
+});
+
+// load ush json lesson content
+async function loadUSH(unit, lesson) {
+	const res = await fetch("javascript/us_history_questions.json");
+	const data = await res.json();
+	return data.ush.units[unit - 1].lessons[lesson - 1];
+}
 
 const PARAMETERS = new URLSearchParams(window.location.search);
-const LESSON_TOPIC = PARAMETERS.get("topic");
 let lessonTitle = "placeholder";
 let lessonContent = "placeholder";
 
-if (LESSON_TOPIC == "US1") {
-	// US History Lesson 1
-	lessonTitle = "Lesson 1: Introduction to US History";
-	lessonContent = US_HISTORY1;
-} else if (LESSON_TOPIC == "US2") {
-	// US History Lesson 2
-	lessonTitle = "Lesson 2: The American Revolution";
-} else {
-	lessonTitle = "Lesson Not Found";
-}
-
+// SET LESSON TITLE AND CONTENT BASED ON TOPIC PARAMETER
 const lessonTitleElement = document.querySelector(".lesson-title");
 const questionElement = document.getElementById("lesson-question");
 const lessonButtonElement = document.getElementById("lesson-answers");
@@ -110,9 +119,11 @@ function selectAnswer(event) {
 		// Adds the "correct" styling class to the selected button
 		selectedButton.classList.add("correct");
 		score++;
+		console.log("Score:", score);
 	} else {
 		selectedButton.classList.add("incorrect");
 		selectedButton.nextSibling.textContent = selectedButton.dataset.reason; // Show reason for incorrect answer
+		console.log("Score:", score);
 	}
 
 	// Loops through all answer buttons to show correct answers and disable them
@@ -156,5 +167,3 @@ navButtonElement.addEventListener("click", () => {
 		startLesson();
 	}
 });
-
-startLesson();

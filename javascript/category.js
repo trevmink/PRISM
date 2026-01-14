@@ -7,8 +7,17 @@ import {
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
 let currentUser = null;
-let lessonNumber = null;
 const unitTitle = document.getElementById("unit-title");
+let selectedCategory = null;
+
+// Load U.S. History lessons from JSON
+async function loadUSHistoryLessons() {
+	const response = await fetch("javascript/us_history.json");
+	return await response.json();
+	if (!response.ok) {
+		throw new Error("Failed to load U.S. History lessons");
+	}
+}
 
 // Track auth state
 onAuthStateChanged(auth, async (user) => {
@@ -24,27 +33,95 @@ onAuthStateChanged(auth, async (user) => {
 		console.log("category", userData.categories);
 	}
 
-	if (userData.categories?.ush) {
-		if (userData.categories.ush.currentUnit == "1") {
-			unitTitle.textContent = "U.S. History - Colonization & Early America";
-			lessonNumber = 8;
-			console.log("lessonNumber", lessonNumber);
-		} else if (userData.categories.ush.currentUnit == "2") {
-			unitTitle.textContent = "U.S. History - Revolution & Independence";
-		} else if (userData.categories.ush.currentUnit == "3") {
-			unitTitle.textContent = "U.S. History - Constitution & Federalism";
-		} else if (userData.categories.ush.currentUnit == "4") {
-			unitTitle.textContent = "U.S. History - Westward Expansion";
-		} else if (userData.categories.ush.currentUnit == "5") {
-			unitTitle.textContent = "U.S. History - Civil War & Reconstruction";
-		} else if (userData.categories.ush.currentUnit == "6") {
-			unitTitle.textContent = "U.S. History - Industrialization";
-		} else if (userData.categories.ush.currentUnit == "7") {
-			unitTitle.textContent = "U.S. History - Progressive Era";
-		} else if (userData.categories.ush.currentUnit == "8") {
-			unitTitle.textContent = "U.S. History - World Wars";
-		} else if (userData.categories.ush.currentUnit == "9") {
-			unitTitle.textContent = "U.S. History - Cold War & Modern America";
+	// loop through categories to find the selected one
+	for (const categoryKey in userData.categories) {
+		if (userData.categories[categoryKey].selected == true) {
+			selectedCategory = categoryKey;
+			break;
 		}
 	}
+	console.log("Selected category:", selectedCategory);
+	if (selectedCategory === "ush") {
+		const unitId = Number(userData.categories.ush.currentUnit); //finds current unit so we can load the correct titles
+		const lessons = await loadUSHistoryLessons();
+		const unit = lessons.ush.units.find((u) => u.id === unitId); // gets the correct unit based on unitId (finding the current unit from user data)
+		console.log(unit);
+		if (!unit) {
+			console.error("Unit not found for id:", unitId);
+			return;
+		}
+
+		unitTitle.textContent = `U.S. History - ${unit.title}`; // sets the unit title based on selected unit
+		createLessonButtons(unit);
+	}
 });
+
+function createLessonButtons(unit) {
+	// 1) Target the existing <ul class="lessons-list"> inside your container
+	const lessonsContainer = document.getElementById("lessons-container");
+	const lessonsList = lessonsContainer?.querySelector(".lessons-list");
+
+	if (!lessonsList) {
+		console.error(
+			'Could not find ".lessons-list" inside #lessons-container. Check your HTML structure.'
+		);
+		return;
+	}
+
+	// 2) Clear any placeholder <li> items so you don't get duplicates
+	lessonsList.innerHTML = "";
+
+	// Helper to create a styled list item that matches your CSS
+	function addLessonItem(label, description, href, lessonNumber) {
+		const li = document.createElement("li");
+		li.className = "lesson-item";
+
+		const a = document.createElement("a");
+		a.addEventListener("click", async (e) => {
+			console.log(lessonNumber + " clicked");
+			if (currentUser) {
+				// update firebase with selected lesson
+				await updateDoc(doc(db, "users", currentUser.uid), {
+					[`categories.${selectedCategory}.currentLesson`]: lessonNumber,
+				});
+				console.log("Firestore updated with lesson:", lessonNumber);
+				window.location.href = href;
+			}
+		});
+
+		const titleDiv = document.createElement("div");
+		titleDiv.textContent = label;
+
+		const descDiv = document.createElement("div");
+		descDiv.textContent = description;
+		descDiv.className = "lesson-description";
+
+		a.appendChild(titleDiv);
+		a.appendChild(descDiv);
+		li.appendChild(a);
+		lessonsList.appendChild(li);
+	}
+
+	unit.lessons.forEach((lesson) => {
+		addLessonItem(
+			`Lesson ${lesson.id}: ${lesson.title}`,
+			lesson.description,
+			`lesson.html?unit=${unit.id}&lesson=${lesson.id}`,
+			lesson.id
+		);
+	});
+
+	// add extra items for weaknesses practice and final quiz
+	addLessonItem(
+		"Weak Skill Practice",
+		"Practice weaknesses",
+		"lesson.html?lesson=weaknesses",
+		"weaknesses"
+	);
+	addLessonItem(
+		"Final Quiz",
+		"Take the final quiz",
+		"lesson.html?lesson=final",
+		"final"
+	);
+}

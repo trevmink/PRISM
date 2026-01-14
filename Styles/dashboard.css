@@ -86,7 +86,7 @@
 	color: rgb(80, 80, 80);
 }
 
-.category-card .continue {
+.category-card .continue-button {
 	margin-top: 0.5rem;
 	font-size: clamp(0.75rem, 1vw, 1.25rem);
 	font-family: roundo, sans-serif;

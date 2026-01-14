@@ -5,47 +5,408 @@
 			{
 				"id": 1,
 				"title": "Colonization & Early America",
-				"description": "Indigenous societies, European exploration, and early settlements."
+				"description": "Indigenous societies, European exploration, and early settlements.",
+				"lessons": [
+					{
+						"id": 1,
+						"title": "Indigenous Peoples of North America",
+						"description": "Native societies before European contact."
+					},
+					{
+						"id": 2,
+						"title": "European Exploration",
+						"description": "Motives and early voyages to the Americas."
+					},
+					{
+						"id": 3,
+						"title": "The Columbian Exchange",
+						"description": "Trade, disease, and cultural exchange."
+					},
+					{
+						"id": 4,
+						"title": "Spanish, French, and English Colonies",
+						"description": "Colonial goals and regional differences."
+					},
+					{
+						"id": 5,
+						"title": "Life in the Thirteen Colonies",
+						"description": "Daily life and colonial regions."
+					},
+					{
+						"id": 6,
+						"title": "Slavery in Colonial America",
+						"description": "Origins and expansion of slavery."
+					},
+					{
+						"id": 7,
+						"title": "Colonial Economy & Mercantilism",
+						"description": "Trade systems and economic control."
+					},
+					{
+						"id": 8,
+						"title": "Growing Tensions with Britain",
+						"description": "Early causes of colonial resistance."
+					}
+				]
 			},
+
 			{
 				"id": 2,
 				"title": "Revolution & Independence",
-				"description": "Causes, events, and consequences of the American Revolution."
+				"description": "Causes, events, and consequences of the American Revolution.",
+				"lessons": [
+					{
+						"id": 1,
+						"title": "Causes of the American Revolution",
+						"description": "Taxation, representation, and resistance."
+					},
+					{
+						"id": 2,
+						"title": "Colonial Protests",
+						"description": "Boycotts, acts, and rebellion."
+					},
+					{
+						"id": 3,
+						"title": "Key Battles of the Revolution",
+						"description": "Major military turning points."
+					},
+					{
+						"id": 4,
+						"title": "Declaration of Independence",
+						"description": "Ideas and impact of independence."
+					},
+					{
+						"id": 5,
+						"title": "Foreign Allies",
+						"description": "Support from France and others."
+					},
+					{
+						"id": 6,
+						"title": "Life During the War",
+						"description": "Experiences of soldiers and civilians."
+					},
+					{
+						"id": 7,
+						"title": "Victory and the Treaty of Paris",
+						"description": "How the war ended and its effects."
+					}
+				]
 			},
+
 			{
 				"id": 3,
 				"title": "Constitution & Federalism",
-				"description": "The Constitution, Bill of Rights, and formation of the federal government."
+				"description": "The Constitution, Bill of Rights, and formation of the federal government.",
+				"lessons": [
+					{
+						"id": 1,
+						"title": "Articles of Confederation",
+						"description": "America’s first government and its weaknesses."
+					},
+					{
+						"id": 2,
+						"title": "Constitutional Convention",
+						"description": "Compromises and debates."
+					},
+					{
+						"id": 3,
+						"title": "Structure of the Constitution",
+						"description": "Articles and branches of government."
+					},
+					{
+						"id": 4,
+						"title": "Federalism",
+						"description": "Division of power between states and federal government."
+					},
+					{
+						"id": 5,
+						"title": "Checks and Balances",
+						"description": "Preventing abuse of power."
+					},
+					{
+						"id": 6,
+						"title": "Ratification Debate",
+						"description": "Federalists vs. Anti-Federalists."
+					},
+					{
+						"id": 7,
+						"title": "The Bill of Rights",
+						"description": "Individual liberties and protections."
+					}
+				]
 			},
+
 			{
 				"id": 4,
 				"title": "Westward Expansion",
-				"description": "Manifest Destiny, territorial growth, and Native American displacement."
+				"description": "Manifest Destiny, territorial growth, and Native American displacement.",
+				"lessons": [
+					{
+						"id": 1,
+						"title": "Louisiana Purchase",
+						"description": "Territorial expansion under Jefferson."
+					},
+					{
+						"id": 2,
+						"title": "Manifest Destiny",
+						"description": "Beliefs driving westward movement."
+					},
+					{
+						"id": 3,
+						"title": "Trails West",
+						"description": "Pioneer life and migration routes."
+					},
+					{
+						"id": 4,
+						"title": "Native American Removal",
+						"description": "Forced relocation and resistance."
+					},
+					{
+						"id": 5,
+						"title": "Texas & Mexican-American War",
+						"description": "Expansion into the Southwest."
+					},
+					{
+						"id": 6,
+						"title": "Gold Rush",
+						"description": "Economic growth and population change."
+					},
+					{
+						"id": 7,
+						"title": "Expansion and Slavery",
+						"description": "Debates over new territories."
+					}
+				]
 			},
+
 			{
 				"id": 5,
 				"title": "Civil War & Reconstruction",
-				"description": "Slavery, sectionalism, the Civil War, and Reconstruction."
+				"description": "Slavery, sectionalism, the Civil War, and Reconstruction.",
+				"lessons": [
+					{
+						"id": 1,
+						"title": "Slavery and Sectionalism",
+						"description": "Growing divide between North and South."
+					},
+					{
+						"id": 2,
+						"title": "Compromises Over Slavery",
+						"description": "Attempts to maintain balance."
+					},
+					{
+						"id": 3,
+						"title": "Election of 1860 & Secession",
+						"description": "Events leading to war."
+					},
+					{
+						"id": 4,
+						"title": "Major Battles of the Civil War",
+						"description": "Turning points of the conflict."
+					},
+					{
+						"id": 5,
+						"title": "Emancipation Proclamation",
+						"description": "Freedom and wartime strategy."
+					},
+					{
+						"id": 6,
+						"title": "Life During the Civil War",
+						"description": "Soldiers, women, and civilians."
+					},
+					{
+						"id": 7,
+						"title": "Reconstruction Plans",
+						"description": "Rebuilding the nation."
+					},
+					{
+						"id": 8,
+						"title": "End of Reconstruction",
+						"description": "Legacy and long-term effects."
+					}
+				]
 			},
+
 			{
 				"id": 6,
 				"title": "Industrialization",
-				"description": "Big business, immigration, urbanization, and labor movements."
+				"description": "Big business, immigration, urbanization, and labor movements.",
+				"lessons": [
+					{
+						"id": 1,
+						"title": "Rise of Big Business",
+						"description": "Industrial leaders and monopolies."
+					},
+					{
+						"id": 2,
+						"title": "New Inventions",
+						"description": "Technology transforming industry."
+					},
+					{
+						"id": 3,
+						"title": "Urbanization",
+						"description": "Growth of American cities."
+					},
+					{
+						"id": 4,
+						"title": "Immigration",
+						"description": "New arrivals and cultural change."
+					},
+					{
+						"id": 5,
+						"title": "Working Conditions",
+						"description": "Factories, child labor, and safety."
+					},
+					{
+						"id": 6,
+						"title": "Labor Unions",
+						"description": "Organizing for workers’ rights."
+					},
+					{
+						"id": 7,
+						"title": "Wealth and Inequality",
+						"description": "Social class divisions."
+					}
+				]
 			},
+
 			{
 				"id": 7,
 				"title": "Progressive Era",
-				"description": "Reforms addressing political corruption and social injustice."
+				"description": "Reforms addressing political corruption and social injustice.",
+				"lessons": [
+					{
+						"id": 1,
+						"title": "Problems of the Gilded Age",
+						"description": "Corruption and inequality."
+					},
+					{
+						"id": 2,
+						"title": "Progressive Reformers",
+						"description": "Leaders pushing for change."
+					},
+					{
+						"id": 3,
+						"title": "Trust-Busting",
+						"description": "Regulating big business."
+					},
+					{
+						"id": 4,
+						"title": "Political Reforms",
+						"description": "Expanding democracy."
+					},
+					{
+						"id": 5,
+						"title": "Women’s Suffrage",
+						"description": "The fight for voting rights."
+					},
+					{
+						"id": 6,
+						"title": "Muckrakers",
+						"description": "Journalism and reform."
+					},
+					{
+						"id": 7,
+						"title": "Limits of Progressivism",
+						"description": "Who reforms excluded."
+					}
+				]
 			},
+
 			{
 				"id": 8,
 				"title": "World Wars",
-				"description": "U.S. involvement in World War I and World War II."
+				"description": "U.S. involvement in World War I and World War II.",
+				"lessons": [
+					{
+						"id": 1,
+						"title": "Causes of World War I",
+						"description": "Global tensions and alliances."
+					},
+					{
+						"id": 2,
+						"title": "U.S. Entry into World War I",
+						"description": "From neutrality to war."
+					},
+					{
+						"id": 3,
+						"title": "Treaty of Versailles",
+						"description": "Ending WWI and consequences."
+					},
+					{
+						"id": 4,
+						"title": "Causes of World War II",
+						"description": "Rise of totalitarianism."
+					},
+					{
+						"id": 5,
+						"title": "Major Events of World War II",
+						"description": "Battles and strategies."
+					},
+					{
+						"id": 6,
+						"title": "Home Front",
+						"description": "Life in America during WWII."
+					},
+					{
+						"id": 7,
+						"title": "The Holocaust",
+						"description": "Genocide and human rights."
+					},
+					{
+						"id": 8,
+						"title": "Outcomes of World War II",
+						"description": "Global and U.S. impact."
+					}
+				]
 			},
+
 			{
 				"id": 9,
 				"title": "Cold War & Modern America",
-				"description": "Cold War tensions, civil rights, and contemporary America."
+				"description": "Cold War tensions, civil rights, and contemporary America.",
+				"lessons": [
+					{
+						"id": 1,
+						"title": "Origins of the Cold War",
+						"description": "U.S.–Soviet rivalry."
+					},
+					{
+						"id": 2,
+						"title": "Containment & Arms Race",
+						"description": "Preventing communism."
+					},
+					{
+						"id": 3,
+						"title": "Korean & Vietnam Wars",
+						"description": "Cold War conflicts."
+					},
+					{
+						"id": 4,
+						"title": "Civil Rights Movement",
+						"description": "Struggle for equality."
+					},
+					{
+						"id": 5,
+						"title": "Social Change (1960s–1970s)",
+						"description": "Cultural and political shifts."
+					},
+					{
+						"id": 6,
+						"title": "End of the Cold War",
+						"description": "Collapse of the Soviet Union."
+					},
+					{
+						"id": 7,
+						"title": "Technology & Globalization",
+						"description": "A changing world."
+					},
+					{
+						"id": 8,
+						"title": "The United States Today",
+						"description": "Contemporary issues and challenges."
+					}
+				]
 			}
 		]
 	}
