@@ -8,6 +8,7 @@
 	width: 90%;
 	max-width: 37.5rem;
 	margin: 6.25rem auto 0;
+	margin-top: 2.25rem;
 	border-radius: 0.625rem;
 	padding: 1.875rem;
 }
@@ -109,4 +110,44 @@
 
 .incorrect {
 	background-color: #f44336 !important;
+}
+
+#question-source {
+	font-size: 0.9rem;
+	opacity: 0.75;
+	margin-bottom: 0.75rem;
+}
+
+/* Center the lesson card */
+.lesson-card {
+	background: #ffffff;
+	border-radius: 16px;
+	width: 100%;
+	max-width: 42rem;
+	height: 80vh; /* FIXED HEIGHT */
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Question & answers scroll internally if needed */
+#lesson-answers {
+	flex: 1;
+	overflow-y: auto;
+	padding-right: 0.5rem;
+}
+
+/* Footer stays visible */
+.lesson-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 1rem;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Nav button stays consistent */
+#nav-button,
+#exit-button {
+	min-width: 6rem;
 }

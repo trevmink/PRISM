@@ -1,11 +1,54 @@
-/* Category Page Styles */
+/* ===============================
+   GLOBAL FONT
+   =============================== */
+
+@font-face {
+	font-family: "Roundo";
+	src: url(Assets/Roundo-Regular.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Apply Roundo everywhere on this page */
+body,
+.category-page {
+	font-family: "Roundo", system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", sans-serif;
+}
+
+/* ===============================
+   CATEGORY PAGE LAYOUT
+   =============================== */
+
+.category-page {
+	display: flex;
+	gap: 5rem;
+	min-height: 100vh;
+}
+
+/* ===============================
+   LEFT PERFORMANCE SIDEBAR
+   =============================== */
+
+.performance-container {
+	flex: 0 0 22.5%;
+	display: flex;
+	flex-direction: column;
+	background-color: #2f2d58;
+	padding-left: 1rem;
+}
+
+/* ===============================
+   STRENGTH / WEAKNESS SECTIONS
+   =============================== */
+
 .strengths-title,
 .weaknesses-title {
 	text-align: left;
 	margin-top: 1rem;
 	margin-left: 0.5rem;
 	font-size: 2rem;
-	color: white;
+	color: #ffffff;
 }
 
 .strengths-image,
@@ -26,25 +69,14 @@
 .weaknesses-description {
 	margin: 1rem 0.5rem 5rem 0.5rem;
 	font-size: 1.2rem;
-	color: white;
+	color: #ffffff;
 	line-height: 1.5em;
 	max-width: 60%;
 }
 
-/* Parent flex container for left/right layout */
-.category-page {
-	display: flex;
-	gap: 5rem; /* space between left and right */
-	min-height: 100vh;
-}
-
-.performance-container {
-	flex: 0 0 22.5%;
-	display: flex;
-	flex-direction: column;
-	background-color: #2f2d58;
-	padding-left: 1rem;
-}
+/* ===============================
+   RIGHT CONTENT AREA
+   =============================== */
 
 .lessons-container {
 	flex: 1;
@@ -54,67 +86,173 @@
 	padding-top: 1rem;
 }
 
+/* ===============================
+   UNIT TITLE
+   =============================== */
+
+.unit-title {
+	font-size: 2.5rem;
+	color: #000000;
+	align-self: flex-start;
+}
+
+/* ===============================
+   LESSON LIST
+   =============================== */
+
 .lessons-list {
 	margin-top: 1rem;
 	list-style: none;
 	padding: 0;
+	display: grid;
+	gap: 16px;
 }
 
+/* Wrapper */
 .lesson-item {
-	margin-bottom: 1rem;
-	text-align: left;
+	margin: 0;
+	padding: 0;
 	border: none;
-	border-radius: 0.5rem;
-	background-color: #9792ec;
-	cursor: pointer;
-	text-align: left;
-	padding: 0.75rem;
-	padding-right: 7.5rem;
+	background: transparent;
 }
+
+/* ===============================
+   LESSON CARD (CLICKABLE)
+   =============================== */
 
 .lesson-item a {
+	display: block;
+	width: 100%;
+	max-width: 58rem;
+	padding: 18px 20px;
+	border-radius: 16px;
+	background-color: #9792ec;
+	border: 1px solid #4f46e5;
 	text-decoration: none;
-	font-size: 1.2rem;
-	color: white;
+	color: #000000;
+	transition: transform 140ms ease, box-shadow 140ms ease,
+		background-color 140ms ease, border-color 140ms ease;
 }
 
-.lesson-item a:hover,
-.lesson-description:hover {
-	color: rgb(0, 0, 0);
+/* Hover */
+.lesson-item a:hover {
+	background-color: #4f46e5;
+	border-color: #4f46e5;
+	transform: translateY(-2px);
+	box-shadow: 0 10px 28px rgba(47, 45, 88, 0.25);
+	color: #ffffff;
 }
 
-.unit-title {
-	font-size: 2.5rem;
-	color: rgb(40, 40, 40);
-	align-self: left;
+/* Active */
+.lesson-item a:active {
+	transform: translateY(0);
+	box-shadow: none;
 }
 
-.go-button {
-	display: inline;
-	width: 1.5rem;
-	height: 1.5rem;
-	margin-left: 0.5rem;
-	vertical-align: middle;
-}
+/* ===============================
+   CARD TEXT
+   =============================== */
 
-.lock-icon {
-	display: none;
-	width: 1.5rem;
-	height: 1.5rem;
-	margin-left: 0.5rem;
-	vertical-align: middle;
-}
-
-.checkmark-icon {
-	display: none;
-	width: 1.5rem;
-	height: 1.5rem;
-	margin-left: 0.5rem;
-	vertical-align: middle;
+.lesson-item a > div:first-child {
+	font-weight: 600;
+	font-size: 1.15rem;
+	margin-bottom: 6px;
+	color: #000000;
 }
 
 .lesson-description {
-	font-size: 0.9em;
+	font-size: 0.95rem;
+	line-height: 1.4;
 	color: #2f2d58;
-	opacity: 0.8;
+	opacity: 0.95;
+}
+
+/* Hover text color */
+.lesson-item a:hover > div:first-child,
+.lesson-item a:hover .lesson-description {
+	color: #ffffff;
+}
+
+/* ===============================
+   PERFORMANCE BADGES
+   =============================== */
+
+.lesson-performance {
+	margin-top: 14px;
+	display: inline-flex;
+	align-items: center;
+	padding: 6px 14px;
+	font-size: 0.85rem;
+	font-weight: 600;
+	border-radius: 999px;
+	border: 1px solid transparent;
+}
+
+.lesson-performance.weak {
+	background: rgba(255, 255, 255, 0.65);
+	color: #2f2d58;
+	border-color: rgba(255, 255, 255, 0.85);
+}
+
+.lesson-performance.ok {
+	background: rgba(255, 255, 255, 0.4);
+	color: #2f2d58;
+	border-color: rgba(255, 255, 255, 0.6);
+}
+
+.lesson-performance.strong {
+	background: #ffffff;
+	color: #4f46e5;
+	border-color: #ffffff;
+}
+
+/* ===============================
+   PERFORMANCE PILLS
+   =============================== */
+
+.perf-pill-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.perf-pill {
+	border: 1px solid rgba(255, 255, 255, 0.35);
+	background: rgba(255, 255, 255, 0.1);
+	color: #ffffff;
+	padding: 8px 12px;
+	border-radius: 8px;
+	font-size: 0.95rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 140ms ease, background-color 140ms ease,
+		border-color 140ms ease;
+}
+
+.perf-pill:hover {
+	transform: translateY(-1px);
+	background: rgba(255, 255, 255, 0.16);
+}
+
+.perf-pill.strong:hover {
+	border-color: #4caf50;
+}
+
+.perf-pill.weak:hover {
+	border-color: #f44336;
+}
+
+/* ===============================
+   SECTION LABELS
+   =============================== */
+
+.perf-section-label {
+	font-size: 0.9rem;
+	font-weight: 700;
+	color: #ffffff;
+	opacity: 0.85;
+	margin-bottom: 6px;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
 }

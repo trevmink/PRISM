@@ -40,23 +40,29 @@
 
 	<body class="lesson-body">
 		<div class="lesson-content">
-			<h1 class="lesson-title">Lesson Title</h1>
-			<h2 class="lesson-question" id="lesson-question">Question goes here.</h2>
-			<div class="lesson-answers" id="lesson-answers">
-				<button class="answer-button">Answer 1</button>
-				<button class="answer-button">Answer 2</button>
-				<button class="answer-button">Answer 3</button>
-				<button class="answer-button">Answer 4</button>
-			</div>
-			<div class="lesson-navigation">
-				<button class="nav-button" id="nav-button">Next</button>
-				<button
-					class="exit-button"
-					id="exit-button"
-					onclick="window.location.href='category.html'"
-				>
-					Exit Lesson
-				</button>
+			<div class="lesson-card">
+				<h1 class="lesson-title">Loading...</h1>
+				<p id="best-score">Best Score: N/A</p>
+
+				<h2 class="lesson-question" id="lesson-question">Loading...</h2>
+				<p id="question-source"></p>
+
+				<div class="lesson-answers" id="lesson-answers">
+					<button class="answer-button">Loading...</button>
+					<button class="answer-button">Loading...</button>
+					<button class="answer-button">Loading...</button>
+					<button class="answer-button">Loading...</button>
+				</div>
+				<div class="lesson-navigation">
+					<button class="nav-button" id="nav-button">Next</button>
+					<button
+						class="exit-button"
+						id="exit-button"
+						onclick="window.location.href='category.html'"
+					>
+						Exit Lesson
+					</button>
+				</div>
 			</div>
 		</div>
 		<script type="module" src="javascript/lesson.js"></script>

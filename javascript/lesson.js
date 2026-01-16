@@ -3,6 +3,7 @@ import {
 	doc,
 	getDoc,
 	updateDoc,
+	serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
@@ -10,6 +11,9 @@ let currentUser = null;
 let category = null;
 let currentLesson = null;
 let currentUnit = null;
+let isPracticeMode = false;
+
+const PARAMETERS = new URLSearchParams(window.location.search);
 
 // Track auth state
 onAuthStateChanged(auth, async (user) => {
@@ -18,6 +22,8 @@ onAuthStateChanged(auth, async (user) => {
 		return;
 	}
 	currentUser = user;
+
+	const mode = PARAMETERS.get("lesson"); // could be "weaknesses" or "final" or a number
 
 	const snap = await getDoc(doc(db, "users", currentUser.uid));
 	const userData = snap.data();
@@ -38,24 +44,158 @@ onAuthStateChanged(auth, async (user) => {
 			break;
 		}
 	}
+	console.log("READ KEY:", lessonIdentifier(currentUnit, currentLesson));
+	console.log("PERF MAP:", userData?.categories?.[category]?.lessonPerformance);
+	if (mode === "weaknesses") {
+		isPracticeMode = true;
+
+		lessonTitle = "Weak Skills Practice";
+
+		const pack = await loadWeakPracticeQuestions(userData);
+		lessonContent = pack.questions;
+
+		// Update the "best-score" area to show what this practice includes (optional)
+		const bestScoreEl = document.getElementById("best-score");
+		if (bestScoreEl) {
+			bestScoreEl.textContent = `Weak lessons included: ${pack.weakKeys.length}`;
+		}
+
+		// If no weak lessons, show message and stop
+		if (lessonContent.length === 0) {
+			lessonTitleElement.textContent = "Weak Skills Practice";
+			questionElement.textContent =
+				"No weak lessons right now (65%+ on all completed lessons).";
+			navButtonElement.style.display = "none";
+			exitButtonElement.style.display = "block";
+			return;
+		}
+
+		startLesson();
+		return;
+	}
 
 	const lessonData = await loadUSH(currentUnit, currentLesson);
 	console.log("LESSON DATA", lessonData);
 
 	lessonTitle =
-		lessonData.title ?? `Unit ${currentUnit} • Lesson ${currentLesson}`;
-	lessonContent = lessonData.questions ?? lessonData; // depends on your JSON shape
+		lessonData.lessonTitle ?? `Unit ${currentUnit} - Lesson ${currentLesson}`;
+	lessonContent = lessonData.questions;
+
+	const bestScoreEl = document.getElementById("best-score");
+	const key = lessonIdentifier(currentUnit, currentLesson); // use your current function (no args)
+	const perf = userData?.categories?.[category]?.lessonPerformance?.[key];
+
+	if (bestScoreEl) {
+		bestScoreEl.textContent = perf
+			? `Best: ${perf.bestPercent}% (Last: ${perf.lastPercent}%)`
+			: "Best: — N/A";
+	}
+
 	startLesson();
 });
+
+// unit and lesson identifier
+function lessonIdentifier(unit, lesson) {
+	return `unit${unit}_lesson${lesson}`;
+}
+
+function parseLessonKey(key) {
+	// key like "u2_l3"
+	const match = key.match(/^u(\d+)_l(\d+)$/);
+	if (!match) return null;
+	return { unit: Number(match[1]), lesson: Number(match[2]) };
+}
+
+function parseUnitLessonKey(key) {
+	const m = key.match(/^unit(\d+)_lesson(\d+)$/);
+	if (!m) return null;
+	return { unit: Number(m[1]), lesson: Number(m[2]) };
+}
+
+async function loadWeakPracticeQuestions(userData) {
+	const perfMap = userData?.categories?.[category]?.lessonPerformance || {};
+
+	// gather weak lessons (bestPercent < 65)
+	const weakKeys = [];
+	for (const [key, perf] of Object.entries(perfMap)) {
+		if (!perf?.completed) continue;
+		const p = perf.bestPercent ?? perf.lastPercent ?? 0;
+		if (p < 65) weakKeys.push(key);
+	}
+
+	// load JSON once
+	const res = await fetch("javascript/us_history_questions.json");
+	const data = await res.json();
+
+	// combine questions
+	const combined = [];
+	for (const key of weakKeys) {
+		const parsed = parseUnitLessonKey(key);
+		if (!parsed) continue;
+
+		const unitObj = data.ush.units.find((u) => u.unitId === parsed.unit);
+		if (!unitObj) continue;
+
+		const lessonObj = unitObj.lessons.find((l) => l.lessonId === parsed.lesson);
+		if (!lessonObj) continue;
+
+		lessonObj.questions.forEach((q) => combined.push({ ...q, _source: key }));
+	}
+
+	// optional shuffle
+	combined.sort(() => Math.random() - 0.5);
+
+	return { weakKeys, questions: combined };
+}
+
+// saves lesson performance
+async function saveLessonPerformance(score, total) {
+	if (!currentUser || !category || !currentUnit || !currentLesson) return;
+
+	const userRef = doc(db, "users", currentUser.uid);
+	const snap = await getDoc(userRef);
+	const userData = snap.data() || {};
+
+	const key = lessonIdentifier(currentUnit, currentLesson);
+
+	const perf = userData.categories?.[category]?.lessonPerformance?.[key] || {};
+
+	const lastPercent = Math.round((score / total) * 100);
+	const bestPercent = Math.max(perf.bestPercent ?? 0, lastPercent);
+	const attempts = (perf.attempts ?? 0) + 1;
+
+	await updateDoc(userRef, {
+		[`categories.${category}.lessonPerformance.${key}`]: {
+			completed: true,
+			lastScore: score,
+			lastOutOf: total,
+			lastPercent,
+			bestPercent,
+			attempts,
+			updatedAt: serverTimestamp(),
+		},
+	});
+	const bestScoreEl = document.getElementById("best-score");
+	if (bestScoreEl) {
+		bestScoreEl.textContent = `Best: ${bestPercent}% (Last: ${lastPercent}%)`;
+	}
+}
 
 // load ush json lesson content
 async function loadUSH(unit, lesson) {
 	const res = await fetch("javascript/us_history_questions.json");
 	const data = await res.json();
-	return data.ush.units[unit - 1].lessons[lesson - 1];
+
+	const unitObj = data.ush.units.find((u) => u.unitId === Number(unit));
+	if (!unitObj) throw new Error(`Unit not found: ${unit}`);
+
+	const lessonObj = unitObj.lessons.find((l) => l.lessonId === Number(lesson));
+	if (!lessonObj)
+		throw new Error(`Lesson not found: ${lesson} in unit ${unit}`);
+
+	return lessonObj;
 }
 
-const PARAMETERS = new URLSearchParams(window.location.search);
 let lessonTitle = "placeholder";
 let lessonContent = "placeholder";
 
@@ -85,6 +225,22 @@ function showQuestion() {
 	let currentQuestion = lessonContent[currentQuestionIndex];
 	let questionNo = currentQuestionIndex + 1;
 	questionElement.textContent = questionNo + ". " + currentQuestion.question;
+
+	const sourceEl = document.getElementById("question-source");
+
+	// Only show source during Weak Practice
+	if (isPracticeMode && currentQuestion._source && sourceEl) {
+		const parsed = parseUnitLessonKey(currentQuestion._source);
+
+		if (parsed) {
+			sourceEl.textContent = `From Unit ${parsed.unit}, Lesson ${parsed.lesson}`;
+			sourceEl.style.display = "block";
+		} else {
+			sourceEl.style.display = "none";
+		}
+	} else if (sourceEl) {
+		sourceEl.style.display = "none";
+	}
 	navButtonElement.style.display = "none";
 
 	// For each answer, create a button
@@ -127,13 +283,17 @@ function selectAnswer(event) {
 	}
 
 	// Loops through all answer buttons to show correct answers and disable them
-	Array.from(lessonButtonElement.children).forEach((button) => {
-		if (button.dataset.correct === "true") {
-			button.classList.add("correct");
-			button.nextSibling.textContent = button.dataset.reason; // Show reason for correct answer
+	const answerButtons = lessonButtonElement.querySelectorAll(
+		"button.answer-button"
+	);
+	answerButtons.forEach((btn) => {
+		if (btn.dataset.correct === "true") {
+			btn.classList.add("correct");
+			btn.nextSibling.textContent = btn.dataset.reason;
 		}
-		button.disabled = true;
+		btn.disabled = true;
 	});
+	// Show the navigation button to proceed
 	navButtonElement.style.display = "block";
 }
 
@@ -141,14 +301,28 @@ function resetState() {
 	while (lessonButtonElement.firstChild) {
 		lessonButtonElement.removeChild(lessonButtonElement.firstChild);
 	}
+
+	const sourceEl = document.getElementById("question-source");
+	if (sourceEl) sourceEl.style.display = "none";
+
+	exitButtonElement.style.display = "none";
 }
 
 function showScore() {
 	resetState();
-	questionElement.textContent = `You scored ${score} out of ${lessonContent.length}!`;
+
 	navButtonElement.textContent = "Restart Lesson";
 	navButtonElement.style.display = "block";
 	exitButtonElement.style.display = "block";
+
+	if (isPracticeMode) {
+		questionElement.textContent = `Practice complete: ${score} / ${lessonContent.length}`;
+		return; // do NOT save during practice
+	}
+
+	// Normal lesson: show score AND save performance
+	questionElement.textContent = `You scored ${score} out of ${lessonContent.length}!`;
+	saveLessonPerformance(score, lessonContent.length);
 }
 
 function handleNextButton() {
