@@ -4,6 +4,7 @@ import {
 	getDoc,
 	updateDoc,
 	serverTimestamp,
+	arrayUnion,
 } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
@@ -12,6 +13,7 @@ let category = null;
 let currentLesson = null;
 let currentUnit = null;
 let isPracticeMode = false;
+let mode = null;
 
 const PARAMETERS = new URLSearchParams(window.location.search);
 
@@ -23,7 +25,7 @@ onAuthStateChanged(auth, async (user) => {
 	}
 	currentUser = user;
 
-	const mode = PARAMETERS.get("lesson"); // could be "weaknesses" or "final" or a number
+	mode = PARAMETERS.get("lesson"); // could be "weaknesses" or "final" or a number
 
 	const snap = await getDoc(doc(db, "users", currentUser.uid));
 	const userData = snap.data();
@@ -46,7 +48,20 @@ onAuthStateChanged(auth, async (user) => {
 	}
 	console.log("READ KEY:", lessonIdentifier(currentUnit, currentLesson));
 	console.log("PERF MAP:", userData?.categories?.[category]?.lessonPerformance);
-	if (mode === "weaknesses") {
+	if (mode === "final") {
+		console.log("Loading final quiz for unit", currentUnit);
+
+		const lessonData = await loadUSHFinal(currentUnit);
+
+		lessonTitle = lessonData.lessonTitle;
+		lessonContent = lessonData.questions;
+
+		// finals should not save lesson performance
+		isPracticeMode = false;
+
+		startLesson();
+		return;
+	} else if (mode === "weaknesses") {
 		isPracticeMode = true;
 
 		lessonTitle = "Weak Skills Practice";
@@ -174,7 +189,9 @@ async function saveLessonPerformance(score, total) {
 			attempts,
 			updatedAt: serverTimestamp(),
 		},
+		[`categories.${category}.completedLessons`]: arrayUnion(key),
 	});
+
 	const bestScoreEl = document.getElementById("best-score");
 	if (bestScoreEl) {
 		bestScoreEl.textContent = `Best: ${bestPercent}% (Last: ${lastPercent}%)`;
@@ -196,6 +213,24 @@ async function loadUSH(unit, lesson) {
 	return lessonObj;
 }
 
+async function loadUSHFinal(unit) {
+	const res = await fetch("javascript/us_history_eou.json");
+	const data = await res.json();
+
+	const unitKey = String(unit);
+	const unitObj = data?.ush?.units?.[unitKey];
+
+	if (!unitObj) {
+		throw new Error(`Final quiz not found for unit: ${unit}`);
+	}
+
+	// Normalize to match lesson engine expectations
+	return {
+		lessonTitle: unitObj.title,
+		questions: unitObj.questions,
+	};
+}
+
 let lessonTitle = "placeholder";
 let lessonContent = "placeholder";
 
@@ -205,6 +240,7 @@ const questionElement = document.getElementById("lesson-question");
 const lessonButtonElement = document.getElementById("lesson-answers");
 const navButtonElement = document.getElementById("nav-button");
 const exitButtonElement = document.getElementById("exit-button");
+const currentScoreElement = document.getElementById("current-score");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -216,6 +252,9 @@ function startLesson() {
 	score = 0;
 	navButtonElement.textContent = "Next";
 	navButtonElement.style.display = "none";
+
+	currentScoreElement.textContent =
+		`Current Score: 0 / ${lessonContent.length}` + " (0%)";
 
 	showQuestion();
 }
@@ -268,7 +307,7 @@ function showQuestion() {
 function selectAnswer(event) {
 	// Determines which button was clicked
 	const selectedButton = event.target;
-
+	resetScroll();
 	// Checks if the selected button is the correct answer
 	const isCorrect = selectedButton.dataset.correct === "true";
 	if (isCorrect) {
@@ -276,15 +315,29 @@ function selectAnswer(event) {
 		selectedButton.classList.add("correct");
 		score++;
 		console.log("Score:", score);
+		currentScoreElement.textContent =
+			`Current Score: ${score}` +
+			" / " +
+			lessonContent.length +
+			" (" +
+			Math.round((score / lessonContent.length) * 100) +
+			"%)";
 	} else {
 		selectedButton.classList.add("incorrect");
 		selectedButton.nextSibling.textContent = selectedButton.dataset.reason; // Show reason for incorrect answer
 		console.log("Score:", score);
+		currentScoreElement.textContent =
+			`Current Score: ${score}` +
+			" / " +
+			lessonContent.length +
+			" (" +
+			Math.round((score / lessonContent.length) * 100) +
+			"%)";
 	}
 
 	// Loops through all answer buttons to show correct answers and disable them
 	const answerButtons = lessonButtonElement.querySelectorAll(
-		"button.answer-button"
+		"button.answer-button",
 	);
 	answerButtons.forEach((btn) => {
 		if (btn.dataset.correct === "true") {
@@ -325,13 +378,36 @@ function showScore() {
 	saveLessonPerformance(score, lessonContent.length);
 }
 
-function handleNextButton() {
+async function handleNextButton() {
+	resetScroll();
+
 	currentQuestionIndex++;
 	if (currentQuestionIndex < lessonContent.length) {
 		showQuestion();
 	} else {
+		if (mode == "final") {
+			console.log("Final quiz completed for unit " + currentUnit);
+
+			// Additional logic for final quiz completion can be added here
+		}
+		try {
+			await markUSHUnitCompleted(Number(currentUnit));
+		} catch (error) {
+			console.error("Error marking unit completed:", error);
+		}
 		showScore();
 	}
+}
+
+async function markUSHUnitCompleted(unitNumber) {
+	if (!currentUser) return;
+
+	const userId = currentUser.uid;
+	const userRef = doc(db, "users", userId);
+
+	await updateDoc(userRef, {
+		"categories.ush.completedUnits": arrayUnion(unitNumber),
+	});
 }
 
 navButtonElement.addEventListener("click", () => {
@@ -341,3 +417,13 @@ navButtonElement.addEventListener("click", () => {
 		startLesson();
 	}
 });
+
+function resetScroll() {
+	const answersEl = document.getElementById("lesson-answers");
+	if (!answersEl) return;
+
+	answersEl.scrollTo({
+		top: 0,
+		behavior: "auto", // use "smooth" if you prefer
+	});
+}

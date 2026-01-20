@@ -84,7 +84,7 @@ function createLessonButtons(unit, perfMap) {
 
 	if (!lessonsList) {
 		console.error(
-			'Could not find ".lessons-list" inside #lessons-container. Check your HTML structure.'
+			'Could not find ".lessons-list" inside #lessons-container. Check your HTML structure.',
 		);
 		return;
 	}
@@ -98,7 +98,7 @@ function createLessonButtons(unit, perfMap) {
 		description,
 		href,
 		lessonNumber,
-		disabled = false
+		disabled = false,
 	) {
 		const li = document.createElement("li");
 		li.className = "lesson-item";
@@ -153,7 +153,7 @@ function createLessonButtons(unit, perfMap) {
 			`Lesson ${lesson.id}: ${lesson.title}`,
 			lesson.description,
 			`lesson.html?unit=${unit.id}&lesson=${lesson.id}`,
-			lesson.id
+			lesson.id,
 		);
 	});
 
@@ -167,18 +167,18 @@ function createLessonButtons(unit, perfMap) {
 		weakCount > 0
 			? `Practice weaknesses (${weakCount} weak lesson${
 					weakCount === 1 ? "" : "s"
-			  })`
+				})`
 			: "No weaknesses right now",
 		"lesson.html?lesson=weaknesses",
 		"weaknesses",
-		weakCount === 0
+		weakCount === 0,
 	);
 
 	addLessonItem(
 		"Final Quiz",
 		"Take the final quiz",
 		"lesson.html?lesson=final",
-		"final"
+		"final",
 	);
 }
 
@@ -202,7 +202,7 @@ function buildLessonTitleMap(lessonsJson) {
 
 function updateStrengthWeaknessDescriptions(perfMap, titleMap) {
 	const entries = Object.entries(perfMap || {}).filter(
-		([, perf]) => perf?.completed
+		([, perf]) => perf?.completed,
 	);
 
 	if (entries.length === 0) {
@@ -299,7 +299,7 @@ function makePerfPill({ key, label, percent, type }) {
 	btn.className = `perf-pill ${type}`;
 	btn.textContent = `${lessonTitle} (${percent}%)`;
 	btn.addEventListener("click", () =>
-		navigateToLesson(parsed.unitId, parsed.lessonId)
+		navigateToLesson(parsed.unitId, parsed.lessonId),
 	);
 
 	return btn;

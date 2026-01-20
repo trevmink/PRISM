@@ -1,0 +1,1204 @@
+{
+	"ush": {
+		"units": {
+			"1": {
+				"title": "Unit 1 Assessment: Colonization & Early America",
+				"questions": [
+					{
+						"question": "Who lived in North America before European contact?",
+						"answers": [
+							{
+								"text": "Native American tribes",
+								"isCorrect": true,
+								"reason": "Indigenous peoples lived in North America long before Europeans arrived."
+							},
+							{
+								"text": "Spanish settlers",
+								"isCorrect": false,
+								"reason": "Spanish settlers arrived later."
+							},
+							{
+								"text": "British colonists",
+								"isCorrect": false,
+								"reason": "British colonization came later."
+							},
+							{
+								"text": "French traders",
+								"isCorrect": false,
+								"reason": "French traders arrived after exploration."
+							}
+						]
+					},
+					{
+						"question": "What motivated European exploration?",
+						"answers": [
+							{
+								"text": "Gold, God, and Glory",
+								"isCorrect": true,
+								"reason": "These were the main motivations for exploration."
+							},
+							{
+								"text": "Escape wars",
+								"isCorrect": false,
+								"reason": "War was not the primary reason."
+							},
+							{
+								"text": "Industrial jobs",
+								"isCorrect": false,
+								"reason": "Industrialization came later."
+							},
+							{
+								"text": "Voting rights",
+								"isCorrect": false,
+								"reason": "This was not relevant."
+							}
+						]
+					},
+					{
+						"question": "What was the Columbian Exchange?",
+						"answers": [
+							{
+								"text": "Exchange of goods, ideas, and diseases",
+								"isCorrect": true,
+								"reason": "It connected Europe, Africa, and the Americas."
+							},
+							{
+								"text": "A trade treaty",
+								"isCorrect": false,
+								"reason": "It was not a treaty."
+							},
+							{
+								"text": "A war",
+								"isCorrect": false,
+								"reason": "It was not a conflict."
+							},
+							{
+								"text": "A colony",
+								"isCorrect": false,
+								"reason": "It was not a place."
+							}
+						]
+					},
+					{
+						"question": "Which European power focused on trade and fur?",
+						"answers": [
+							{
+								"text": "France",
+								"isCorrect": true,
+								"reason": "French colonies focused on trade and alliances."
+							},
+							{
+								"text": "Spain",
+								"isCorrect": false,
+								"reason": "Spain focused on gold and control."
+							},
+							{
+								"text": "England",
+								"isCorrect": false,
+								"reason": "England focused on settlements."
+							},
+							{
+								"text": "Portugal",
+								"isCorrect": false,
+								"reason": "Portugal focused elsewhere."
+							}
+						]
+					},
+					{
+						"question": "What characterized life in the New England colonies?",
+						"answers": [
+							{
+								"text": "Small farms and town meetings",
+								"isCorrect": true,
+								"reason": "These were key features."
+							},
+							{
+								"text": "Large plantations",
+								"isCorrect": false,
+								"reason": "That was the South."
+							},
+							{
+								"text": "Mining",
+								"isCorrect": false,
+								"reason": "Mining was not common."
+							},
+							{
+								"text": "Nomadic lifestyle",
+								"isCorrect": false,
+								"reason": "Colonists lived in towns."
+							}
+						]
+					},
+					{
+						"question": "Why did slavery expand in the colonies?",
+						"answers": [
+							{
+								"text": "Need for labor on plantations",
+								"isCorrect": true,
+								"reason": "Plantation agriculture required labor."
+							},
+							{
+								"text": "Religious reasons",
+								"isCorrect": false,
+								"reason": "Religion was not the reason."
+							},
+							{
+								"text": "Industrial factories",
+								"isCorrect": false,
+								"reason": "Factories came later."
+							},
+							{
+								"text": "Political power",
+								"isCorrect": false,
+								"reason": "Labor needs drove slavery."
+							}
+						]
+					},
+					{
+						"question": "What is mercantilism?",
+						"answers": [
+							{
+								"text": "Economic system where colonies benefit the mother country",
+								"isCorrect": true,
+								"reason": "Mercantilism enriched European nations."
+							},
+							{
+								"text": "Free trade",
+								"isCorrect": false,
+								"reason": "It limited trade."
+							},
+							{
+								"text": "Communism",
+								"isCorrect": false,
+								"reason": "This came much later."
+							},
+							{
+								"text": "Democracy",
+								"isCorrect": false,
+								"reason": "It was an economic system."
+							}
+						]
+					},
+					{
+						"question": "What increased tensions between Britain and the colonies?",
+						"answers": [
+							{
+								"text": "Taxes and lack of representation",
+								"isCorrect": true,
+								"reason": "Colonists protested British control."
+							},
+							{
+								"text": "Too much independence",
+								"isCorrect": false,
+								"reason": "Colonists had limited power."
+							},
+							{
+								"text": "Foreign invasion",
+								"isCorrect": false,
+								"reason": "Britain was the ruler."
+							},
+							{
+								"text": "Religious freedom",
+								"isCorrect": false,
+								"reason": "This was not the issue."
+							}
+						]
+					}
+				]
+			},
+
+			"2": {
+				"title": "Unit 2 Assessment: Revolution & Independence",
+				"questions": [
+					{
+						"question": "What was a major cause of the American Revolution?",
+						"answers": [
+							{
+								"text": "Taxation without representation",
+								"isCorrect": true,
+								"reason": "Colonists had no voice in Parliament."
+							},
+							{
+								"text": "Religious persecution",
+								"isCorrect": false,
+								"reason": "Religion was not the main cause."
+							},
+							{
+								"text": "Industrialization",
+								"isCorrect": false,
+								"reason": "Industry was limited."
+							},
+							{
+								"text": "Immigration",
+								"isCorrect": false,
+								"reason": "Not a cause."
+							}
+						]
+					},
+					{
+						"question": "What protest destroyed British tea?",
+						"answers": [
+							{
+								"text": "Boston Tea Party",
+								"isCorrect": true,
+								"reason": "Colonists dumped tea into the harbor."
+							},
+							{
+								"text": "Stamp Act Congress",
+								"isCorrect": false,
+								"reason": "This was a meeting."
+							},
+							{
+								"text": "First Continental Congress",
+								"isCorrect": false,
+								"reason": "This was political."
+							},
+							{
+								"text": "Tea Act",
+								"isCorrect": false,
+								"reason": "This was a law."
+							}
+						]
+					},
+					{
+						"question": "Which battle was the turning point of the war?",
+						"answers": [
+							{
+								"text": "Battle of Saratoga",
+								"isCorrect": true,
+								"reason": "It led to French support."
+							},
+							{
+								"text": "Lexington and Concord",
+								"isCorrect": false,
+								"reason": "These were the first battles."
+							},
+							{
+								"text": "Yorktown",
+								"isCorrect": false,
+								"reason": "This ended the war."
+							},
+							{
+								"text": "Bunker Hill",
+								"isCorrect": false,
+								"reason": "Early battle."
+							}
+						]
+					},
+					{
+						"question": "Who wrote the Declaration of Independence?",
+						"answers": [
+							{
+								"text": "Thomas Jefferson",
+								"isCorrect": true,
+								"reason": "He was the main author."
+							},
+							{
+								"text": "George Washington",
+								"isCorrect": false,
+								"reason": "He led the army."
+							},
+							{
+								"text": "John Adams",
+								"isCorrect": false,
+								"reason": "He helped but did not write it."
+							},
+							{
+								"text": "Benjamin Franklin",
+								"isCorrect": false,
+								"reason": "He edited it."
+							}
+						]
+					},
+					{
+						"question": "Which country helped the colonies defeat Britain?",
+						"answers": [
+							{
+								"text": "France",
+								"isCorrect": true,
+								"reason": "France provided money, troops, and ships."
+							},
+							{
+								"text": "Spain",
+								"isCorrect": false,
+								"reason": "Spain helped later."
+							},
+							{
+								"text": "Germany",
+								"isCorrect": false,
+								"reason": "Germany was not a country yet."
+							},
+							{
+								"text": "Italy",
+								"isCorrect": false,
+								"reason": "Italy was not unified."
+							}
+						]
+					},
+					{
+						"question": "What treaty ended the Revolutionary War?",
+						"answers": [
+							{
+								"text": "Treaty of Paris",
+								"isCorrect": true,
+								"reason": "It recognized U.S. independence."
+							},
+							{
+								"text": "Treaty of Versailles",
+								"isCorrect": false,
+								"reason": "This ended WWI."
+							},
+							{
+								"text": "Stamp Act",
+								"isCorrect": false,
+								"reason": "This was a tax."
+							},
+							{
+								"text": "Tea Act",
+								"isCorrect": false,
+								"reason": "This caused protest."
+							}
+						]
+					}
+				]
+			},
+
+			"3": {
+				"title": "Unit 3 Assessment: Constitution & Federalism",
+				"questions": [
+					{
+						"question": "Why did the Articles of Confederation fail?",
+						"answers": [
+							{
+								"text": "Weak central government",
+								"isCorrect": true,
+								"reason": "The national government had little power."
+							},
+							{
+								"text": "Too many taxes",
+								"isCorrect": false,
+								"reason": "It could not tax."
+							},
+							{
+								"text": "Strong army",
+								"isCorrect": false,
+								"reason": "There was no strong army."
+							},
+							{
+								"text": "Too much trade control",
+								"isCorrect": false,
+								"reason": "It lacked trade power."
+							}
+						]
+					},
+					{
+						"question": "What was the purpose of the Constitutional Convention?",
+						"answers": [
+							{
+								"text": "To fix the Articles of Confederation",
+								"isCorrect": true,
+								"reason": "Delegates decided to create a new system."
+							},
+							{
+								"text": "Declare independence",
+								"isCorrect": false,
+								"reason": "That happened earlier."
+							},
+							{
+								"text": "Start a war",
+								"isCorrect": false,
+								"reason": "It was peaceful."
+							},
+							{
+								"text": "Create political parties",
+								"isCorrect": false,
+								"reason": "Parties came later."
+							}
+						]
+					},
+					{
+						"question": "How many branches of government are there?",
+						"answers": [
+							{
+								"text": "Three",
+								"isCorrect": true,
+								"reason": "Legislative, executive, and judicial."
+							},
+							{
+								"text": "One",
+								"isCorrect": false,
+								"reason": "Power is divided."
+							},
+							{
+								"text": "Two",
+								"isCorrect": false,
+								"reason": "There are three."
+							},
+							{
+								"text": "Four",
+								"isCorrect": false,
+								"reason": "There are only three."
+							}
+						]
+					},
+					{
+						"question": "What is federalism?",
+						"answers": [
+							{
+								"text": "Sharing power between states and federal government",
+								"isCorrect": true,
+								"reason": "Power is divided."
+							},
+							{
+								"text": "State control only",
+								"isCorrect": false,
+								"reason": "Federal government also has power."
+							},
+							{
+								"text": "King rule",
+								"isCorrect": false,
+								"reason": "The U.S. rejected monarchy."
+							},
+							{
+								"text": "Military rule",
+								"isCorrect": false,
+								"reason": "The U.S. is civilian-led."
+							}
+						]
+					},
+					{
+						"question": "Why was the Bill of Rights added?",
+						"answers": [
+							{
+								"text": "To protect individual freedoms",
+								"isCorrect": true,
+								"reason": "It guarantees civil liberties."
+							},
+							{
+								"text": "To raise taxes",
+								"isCorrect": false,
+								"reason": "Not its purpose."
+							},
+							{
+								"text": "To strengthen the army",
+								"isCorrect": false,
+								"reason": "Military power was limited."
+							},
+							{
+								"text": "To end slavery",
+								"isCorrect": false,
+								"reason": "That happened later."
+							}
+						]
+					}
+				]
+			},
+
+			"4": {
+				"title": "Unit 4 Assessment: Westward Expansion",
+				"questions": [
+					{
+						"question": "What was the Louisiana Purchase?",
+						"answers": [
+							{
+								"text": "Land bought from France in 1803",
+								"isCorrect": true,
+								"reason": "The U.S. doubled its size by purchasing land from France."
+							},
+							{
+								"text": "Land taken from Spain",
+								"isCorrect": false,
+								"reason": "It was purchased from France."
+							},
+							{
+								"text": "Land won in war",
+								"isCorrect": false,
+								"reason": "It was bought peacefully."
+							},
+							{
+								"text": "A treaty with Britain",
+								"isCorrect": false,
+								"reason": "Britain was not involved."
+							}
+						]
+					},
+					{
+						"question": "What did Manifest Destiny encourage?",
+						"answers": [
+							{
+								"text": "Westward expansion",
+								"isCorrect": true,
+								"reason": "Americans believed expansion was their destiny."
+							},
+							{
+								"text": "Industrial growth",
+								"isCorrect": false,
+								"reason": "This focused on land expansion."
+							},
+							{
+								"text": "Ending slavery",
+								"isCorrect": false,
+								"reason": "This came later."
+							},
+							{
+								"text": "Urbanization",
+								"isCorrect": false,
+								"reason": "Cities grew later."
+							}
+						]
+					},
+					{
+						"question": "What was the Trail of Tears?",
+						"answers": [
+							{
+								"text": "Forced removal of Native Americans",
+								"isCorrect": true,
+								"reason": "Thousands died during relocation."
+							},
+							{
+								"text": "A trade route",
+								"isCorrect": false,
+								"reason": "It was not voluntary."
+							},
+							{
+								"text": "A gold trail",
+								"isCorrect": false,
+								"reason": "It involved forced removal."
+							},
+							{
+								"text": "A battle",
+								"isCorrect": false,
+								"reason": "It was not a battle."
+							}
+						]
+					},
+					{
+						"question": "Why did pioneers travel west?",
+						"answers": [
+							{
+								"text": "Land and opportunity",
+								"isCorrect": true,
+								"reason": "Many sought farms and wealth."
+							},
+							{
+								"text": "Escape laws",
+								"isCorrect": false,
+								"reason": "Laws were not the cause."
+							},
+							{
+								"text": "Religious freedom only",
+								"isCorrect": false,
+								"reason": "There were multiple reasons."
+							},
+							{
+								"text": "Government orders",
+								"isCorrect": false,
+								"reason": "It was voluntary for most settlers."
+							}
+						]
+					},
+					{
+						"question": "What discovery increased westward migration?",
+						"answers": [
+							{
+								"text": "Gold",
+								"isCorrect": true,
+								"reason": "The Gold Rush attracted settlers."
+							},
+							{
+								"text": "Oil",
+								"isCorrect": false,
+								"reason": "Oil came later."
+							},
+							{
+								"text": "Coal",
+								"isCorrect": false,
+								"reason": "Coal was not the main reason."
+							},
+							{
+								"text": "Railroads",
+								"isCorrect": false,
+								"reason": "Railroads expanded later."
+							}
+						]
+					}
+				]
+			},
+			"5": {
+				"title": "Unit 5 Assessment: Civil War & Reconstruction",
+				"questions": [
+					{
+						"question": "What caused sectionalism?",
+						"answers": [
+							{
+								"text": "Differences between North and South",
+								"isCorrect": true,
+								"reason": "Economic and social differences divided regions."
+							},
+							{
+								"text": "Foreign wars",
+								"isCorrect": false,
+								"reason": "This was internal conflict."
+							},
+							{
+								"text": "Industrial growth",
+								"isCorrect": false,
+								"reason": "That increased tensions but was not the cause alone."
+							},
+							{
+								"text": "Immigration",
+								"isCorrect": false,
+								"reason": "Not the main cause."
+							}
+						]
+					},
+					{
+						"question": "What issue led to the Civil War?",
+						"answers": [
+							{
+								"text": "Slavery",
+								"isCorrect": true,
+								"reason": "Disagreements over slavery caused the war."
+							},
+							{
+								"text": "Trade disputes",
+								"isCorrect": false,
+								"reason": "Trade was secondary."
+							},
+							{
+								"text": "Taxation",
+								"isCorrect": false,
+								"reason": "Not the main issue."
+							},
+							{
+								"text": "Religion",
+								"isCorrect": false,
+								"reason": "Religion was not central."
+							}
+						]
+					},
+					{
+						"question": "Who was president during most of the Civil War?",
+						"answers": [
+							{
+								"text": "Abraham Lincoln",
+								"isCorrect": true,
+								"reason": "He led the Union."
+							},
+							{
+								"text": "Andrew Johnson",
+								"isCorrect": false,
+								"reason": "He became president later."
+							},
+							{
+								"text": "Ulysses S. Grant",
+								"isCorrect": false,
+								"reason": "He was a general."
+							},
+							{
+								"text": "Jefferson Davis",
+								"isCorrect": false,
+								"reason": "He led the Confederacy."
+							}
+						]
+					},
+					{
+						"question": "What did the Emancipation Proclamation do?",
+						"answers": [
+							{
+								"text": "Freed slaves in Confederate states",
+								"isCorrect": true,
+								"reason": "It weakened the Confederacy."
+							},
+							{
+								"text": "Ended slavery everywhere",
+								"isCorrect": false,
+								"reason": "The 13th Amendment did that."
+							},
+							{
+								"text": "Granted voting rights",
+								"isCorrect": false,
+								"reason": "That came later."
+							},
+							{
+								"text": "Ended the war",
+								"isCorrect": false,
+								"reason": "The war continued."
+							}
+						]
+					},
+					{
+						"question": "What was Reconstruction?",
+						"answers": [
+							{
+								"text": "Rebuilding the South after the war",
+								"isCorrect": true,
+								"reason": "It focused on reunification."
+							},
+							{
+								"text": "Starting new wars",
+								"isCorrect": false,
+								"reason": "It was post-war rebuilding."
+							},
+							{
+								"text": "Expanding westward",
+								"isCorrect": false,
+								"reason": "That was earlier."
+							},
+							{
+								"text": "Industrial growth",
+								"isCorrect": false,
+								"reason": "This came later."
+							}
+						]
+					}
+				]
+			},
+			"6": {
+				"title": "Unit 6 Assessment: Industrialization",
+				"questions": [
+					{
+						"question": "What fueled industrial growth?",
+						"answers": [
+							{
+								"text": "New technology",
+								"isCorrect": true,
+								"reason": "Inventions increased production."
+							},
+							{
+								"text": "Agriculture only",
+								"isCorrect": false,
+								"reason": "Industry expanded beyond farming."
+							},
+							{
+								"text": "Foreign rule",
+								"isCorrect": false,
+								"reason": "The U.S. was independent."
+							},
+							{
+								"text": "War",
+								"isCorrect": false,
+								"reason": "Growth was economic."
+							}
+						]
+					},
+					{
+						"question": "What was urbanization?",
+						"answers": [
+							{
+								"text": "Growth of cities",
+								"isCorrect": true,
+								"reason": "People moved to cities for jobs."
+							},
+							{
+								"text": "Rural farming",
+								"isCorrect": false,
+								"reason": "Urbanization is city growth."
+							},
+							{
+								"text": "Westward expansion",
+								"isCorrect": false,
+								"reason": "This was different."
+							},
+							{
+								"text": "Political reform",
+								"isCorrect": false,
+								"reason": "Not political."
+							}
+						]
+					},
+					{
+						"question": "Why did immigrants come to the U.S.?",
+						"answers": [
+							{
+								"text": "Jobs and opportunity",
+								"isCorrect": true,
+								"reason": "Factories needed workers."
+							},
+							{
+								"text": "Government orders",
+								"isCorrect": false,
+								"reason": "They came voluntarily."
+							},
+							{
+								"text": "Military service",
+								"isCorrect": false,
+								"reason": "Not the reason."
+							},
+							{
+								"text": "Voting rights",
+								"isCorrect": false,
+								"reason": "Many could not vote."
+							}
+						]
+					},
+					{
+						"question": "What problem did factory workers face?",
+						"answers": [
+							{
+								"text": "Unsafe conditions",
+								"isCorrect": true,
+								"reason": "Factories were dangerous."
+							},
+							{
+								"text": "Too much pay",
+								"isCorrect": false,
+								"reason": "Wages were low."
+							},
+							{
+								"text": "Too much free time",
+								"isCorrect": false,
+								"reason": "Hours were long."
+							},
+							{
+								"text": "No jobs",
+								"isCorrect": false,
+								"reason": "Jobs existed but were unsafe."
+							}
+						]
+					},
+					{
+						"question": "Why were labor unions formed?",
+						"answers": [
+							{
+								"text": "To protect workers’ rights",
+								"isCorrect": true,
+								"reason": "They fought for fair wages and safety."
+							},
+							{
+								"text": "To increase profits",
+								"isCorrect": false,
+								"reason": "They focused on workers."
+							},
+							{
+								"text": "To stop immigration",
+								"isCorrect": false,
+								"reason": "Not their goal."
+							},
+							{
+								"text": "To control government",
+								"isCorrect": false,
+								"reason": "They focused on labor."
+							}
+						]
+					}
+				]
+			},
+			"7": {
+				"title": "Unit 7 Assessment: Progressive Era",
+				"questions": [
+					{
+						"question": "What problem did Progressives try to fix?",
+						"answers": [
+							{
+								"text": "Corruption",
+								"isCorrect": true,
+								"reason": "Progressives wanted honest government."
+							},
+							{
+								"text": "Expansion",
+								"isCorrect": false,
+								"reason": "That was earlier."
+							},
+							{
+								"text": "Foreign wars",
+								"isCorrect": false,
+								"reason": "Not the focus."
+							},
+							{
+								"text": "Slavery",
+								"isCorrect": false,
+								"reason": "Slavery had ended."
+							}
+						]
+					},
+					{
+						"question": "What was trust-busting?",
+						"answers": [
+							{
+								"text": "Breaking up monopolies",
+								"isCorrect": true,
+								"reason": "It increased competition."
+							},
+							{
+								"text": "Raising taxes",
+								"isCorrect": false,
+								"reason": "Not the goal."
+							},
+							{
+								"text": "Supporting big business",
+								"isCorrect": false,
+								"reason": "It limited big business."
+							},
+							{
+								"text": "Starting unions",
+								"isCorrect": false,
+								"reason": "Different reform."
+							}
+						]
+					},
+					{
+						"question": "Who were muckrakers?",
+						"answers": [
+							{
+								"text": "Journalists exposing problems",
+								"isCorrect": true,
+								"reason": "They raised awareness."
+							},
+							{
+								"text": "Politicians",
+								"isCorrect": false,
+								"reason": "They were writers."
+							},
+							{
+								"text": "Business owners",
+								"isCorrect": false,
+								"reason": "They criticized business."
+							},
+							{
+								"text": "Farmers",
+								"isCorrect": false,
+								"reason": "They were journalists."
+							}
+						]
+					},
+					{
+						"question": "What was a major Progressive achievement?",
+						"answers": [
+							{
+								"text": "Women’s suffrage",
+								"isCorrect": true,
+								"reason": "Women gained voting rights."
+							},
+							{
+								"text": "Slavery",
+								"isCorrect": false,
+								"reason": "Slavery ended earlier."
+							},
+							{
+								"text": "Manifest Destiny",
+								"isCorrect": false,
+								"reason": "Earlier era."
+							},
+							{
+								"text": "Isolationism",
+								"isCorrect": false,
+								"reason": "Different policy."
+							}
+						]
+					}
+				]
+			},
+			"8": {
+				"title": "Unit 8 Assessment: World Wars",
+				"questions": [
+					{
+						"question": "What caused World War I?",
+						"answers": [
+							{
+								"text": "Alliances and nationalism",
+								"isCorrect": true,
+								"reason": "These tensions led to war."
+							},
+							{
+								"text": "Industrialization",
+								"isCorrect": false,
+								"reason": "Not the main cause."
+							},
+							{
+								"text": "Immigration",
+								"isCorrect": false,
+								"reason": "Not related."
+							},
+							{
+								"text": "Colonization of America",
+								"isCorrect": false,
+								"reason": "Different era."
+							}
+						]
+					},
+					{
+						"question": "Why did the U.S. enter World War I?",
+						"answers": [
+							{
+								"text": "German attacks on ships",
+								"isCorrect": true,
+								"reason": "U.S. ships were attacked."
+							},
+							{
+								"text": "Land expansion",
+								"isCorrect": false,
+								"reason": "Not the reason."
+							},
+							{
+								"text": "Political pressure",
+								"isCorrect": false,
+								"reason": "Security was key."
+							},
+							{
+								"text": "Territory gain",
+								"isCorrect": false,
+								"reason": "The U.S. did not seek land."
+							}
+						]
+					},
+					{
+						"question": "What caused World War II?",
+						"answers": [
+							{
+								"text": "Rise of totalitarian governments",
+								"isCorrect": true,
+								"reason": "Leaders like Hitler caused conflict."
+							},
+							{
+								"text": "Colonial disputes",
+								"isCorrect": false,
+								"reason": "Different causes."
+							},
+							{
+								"text": "Industrial strikes",
+								"isCorrect": false,
+								"reason": "Not the cause."
+							},
+							{
+								"text": "U.S. isolation",
+								"isCorrect": false,
+								"reason": "Isolation ended after Pearl Harbor."
+							}
+						]
+					},
+					{
+						"question": "Why did the U.S. enter World War II?",
+						"answers": [
+							{
+								"text": "Attack on Pearl Harbor",
+								"isCorrect": true,
+								"reason": "Japan attacked U.S. territory."
+							},
+							{
+								"text": "Trade disputes",
+								"isCorrect": false,
+								"reason": "Military attack caused entry."
+							},
+							{
+								"text": "Alliance pressure",
+								"isCorrect": false,
+								"reason": "Security was the reason."
+							},
+							{
+								"text": "Land expansion",
+								"isCorrect": false,
+								"reason": "Not the reason."
+							}
+						]
+					}
+				]
+			},
+			"9": {
+				"title": "Unit 9 Assessment: Cold War & Modern America",
+				"questions": [
+					{
+						"question": "What was the Cold War?",
+						"answers": [
+							{
+								"text": "Conflict between the U.S. and Soviet Union",
+								"isCorrect": true,
+								"reason": "It was ideological rivalry."
+							},
+							{
+								"text": "Direct fighting",
+								"isCorrect": false,
+								"reason": "They did not fight directly."
+							},
+							{
+								"text": "A civil war",
+								"isCorrect": false,
+								"reason": "It was international."
+							},
+							{
+								"text": "A trade war",
+								"isCorrect": false,
+								"reason": "It was political and military."
+							}
+						]
+					},
+					{
+						"question": "What was containment?",
+						"answers": [
+							{
+								"text": "Stopping the spread of communism",
+								"isCorrect": true,
+								"reason": "This guided U.S. foreign policy."
+							},
+							{
+								"text": "Expanding communism",
+								"isCorrect": false,
+								"reason": "It aimed to stop it."
+							},
+							{
+								"text": "Ending wars",
+								"isCorrect": false,
+								"reason": "Conflicts continued."
+							},
+							{
+								"text": "Isolationism",
+								"isCorrect": false,
+								"reason": "The U.S. was involved globally."
+							}
+						]
+					},
+					{
+						"question": "What was the Civil Rights Movement?",
+						"answers": [
+							{
+								"text": "Fight for racial equality",
+								"isCorrect": true,
+								"reason": "It sought equal rights."
+							},
+							{
+								"text": "Economic reform",
+								"isCorrect": false,
+								"reason": "Focused on civil rights."
+							},
+							{
+								"text": "Foreign policy",
+								"isCorrect": false,
+								"reason": "Domestic movement."
+							},
+							{
+								"text": "Military conflict",
+								"isCorrect": false,
+								"reason": "Peaceful protest."
+							}
+						]
+					},
+					{
+						"question": "What marked the end of the Cold War?",
+						"answers": [
+							{
+								"text": "Collapse of the Soviet Union",
+								"isCorrect": true,
+								"reason": "The USSR dissolved in 1991."
+							},
+							{
+								"text": "Vietnam War",
+								"isCorrect": false,
+								"reason": "Earlier conflict."
+							},
+							{
+								"text": "Korean War",
+								"isCorrect": false,
+								"reason": "Earlier conflict."
+							},
+							{
+								"text": "World War II",
+								"isCorrect": false,
+								"reason": "Much earlier."
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}
