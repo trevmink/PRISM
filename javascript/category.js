@@ -117,7 +117,7 @@ function createLessonButtons(unit, perfMap) {
 						[`categories.${selectedCategory}.currentLesson`]: lessonNumber,
 					});
 				}
-
+				// location change
 				window.location.href = href;
 			});
 		}
