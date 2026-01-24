@@ -12,8 +12,13 @@
 /* Apply Roundo everywhere on this page */
 body,
 .category-page {
-	font-family: "Roundo", system-ui, -apple-system, BlinkMacSystemFont,
-		"Segoe UI", sans-serif;
+	font-family:
+		"Roundo",
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		sans-serif;
 }
 
 /* ===============================
@@ -130,8 +135,11 @@ body,
 	border: 1px solid #4f46e5;
 	text-decoration: none;
 	color: #000000;
-	transition: transform 140ms ease, box-shadow 140ms ease,
-		background-color 140ms ease, border-color 140ms ease;
+	transition:
+		transform 140ms ease,
+		box-shadow 140ms ease,
+		background-color 140ms ease,
+		border-color 140ms ease;
 }
 
 /* Hover */
@@ -227,7 +235,9 @@ body,
 	font-size: 0.95rem;
 	font-weight: 600;
 	cursor: pointer;
-	transition: transform 140ms ease, background-color 140ms ease,
+	transition:
+		transform 140ms ease,
+		background-color 140ms ease,
 		border-color 140ms ease;
 }
 
@@ -271,4 +281,33 @@ a.disabled-link:hover {
 	box-shadow: none;
 	color: #000000;
 	cursor: not-allowed;
+}
+
+.back-button {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 0.5rem;
+	background-color: #9792ec;
+	color: white;
+	cursor: pointer;
+	align-self: flex-start;
+	margin-top: 1rem;
+	margin-left: 0.5rem;
+}
+
+.back-button:hover {
+	background-color: #4f46e5;
+	border-color: #4f46e5;
+	transform: translateY(-2px);
+	box-shadow: 0 10px 28px rgba(47, 45, 88, 0.25);
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.back-button:active {
+	transform: translateY(0);
+	box-shadow: none;
 }

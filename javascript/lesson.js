@@ -15,6 +15,8 @@ let currentUnit = null;
 let isPracticeMode = false;
 let mode = null;
 
+const resultMessageEl = document.getElementById("result-message");
+
 const PARAMETERS = new URLSearchParams(window.location.search);
 
 // Track auth state
@@ -322,6 +324,8 @@ function selectAnswer(event) {
 			" (" +
 			Math.round((score / lessonContent.length) * 100) +
 			"%)";
+		resultMessageEl.textContent = "CORRECT!";
+		resultMessageEl.style.color = "#4caf50";
 	} else {
 		selectedButton.classList.add("incorrect");
 		selectedButton.nextSibling.textContent = selectedButton.dataset.reason; // Show reason for incorrect answer
@@ -333,6 +337,8 @@ function selectAnswer(event) {
 			" (" +
 			Math.round((score / lessonContent.length) * 100) +
 			"%)";
+		resultMessageEl.textContent = "INCORRECT.";
+		resultMessageEl.style.color = "#f44336";
 	}
 
 	// Loops through all answer buttons to show correct answers and disable them
@@ -359,6 +365,7 @@ function resetState() {
 	if (sourceEl) sourceEl.style.display = "none";
 
 	exitButtonElement.style.display = "none";
+	resultMessageEl.textContent = "";
 }
 
 function showScore() {

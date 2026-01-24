@@ -8,11 +8,6 @@
 						"question": "Who lived in North America before European contact?",
 						"answers": [
 							{
-								"text": "Native American tribes",
-								"isCorrect": true,
-								"reason": "Indigenous peoples lived in North America long before Europeans arrived."
-							},
-							{
 								"text": "Spanish settlers",
 								"isCorrect": false,
 								"reason": "Spanish settlers arrived later."
@@ -26,6 +21,11 @@
 								"text": "French traders",
 								"isCorrect": false,
 								"reason": "French traders arrived after exploration."
+							},
+							{
+								"text": "Native American tribes",
+								"isCorrect": true,
+								"reason": "Indigenous peoples lived in North America long before Europeans arrived."
 							}
 						]
 					},
@@ -58,11 +58,6 @@
 						"question": "What was the Columbian Exchange?",
 						"answers": [
 							{
-								"text": "Exchange of goods, ideas, and diseases",
-								"isCorrect": true,
-								"reason": "It connected Europe, Africa, and the Americas."
-							},
-							{
 								"text": "A trade treaty",
 								"isCorrect": false,
 								"reason": "It was not a treaty."
@@ -71,6 +66,11 @@
 								"text": "A war",
 								"isCorrect": false,
 								"reason": "It was not a conflict."
+							},
+							{
+								"text": "Exchange of goods, ideas, and diseases",
+								"isCorrect": true,
+								"reason": "It connected Europe, Africa, and the Americas."
 							},
 							{
 								"text": "A colony",
@@ -83,14 +83,14 @@
 						"question": "Which European power focused on trade and fur?",
 						"answers": [
 							{
-								"text": "France",
-								"isCorrect": true,
-								"reason": "French colonies focused on trade and alliances."
-							},
-							{
 								"text": "Spain",
 								"isCorrect": false,
 								"reason": "Spain focused on gold and control."
+							},
+							{
+								"text": "France",
+								"isCorrect": true,
+								"reason": "French colonies focused on trade and alliances."
 							},
 							{
 								"text": "England",
@@ -108,11 +108,6 @@
 						"question": "What characterized life in the New England colonies?",
 						"answers": [
 							{
-								"text": "Small farms and town meetings",
-								"isCorrect": true,
-								"reason": "These were key features."
-							},
-							{
 								"text": "Large plantations",
 								"isCorrect": false,
 								"reason": "That was the South."
@@ -121,6 +116,11 @@
 								"text": "Mining",
 								"isCorrect": false,
 								"reason": "Mining was not common."
+							},
+							{
+								"text": "Small farms and town meetings",
+								"isCorrect": true,
+								"reason": "These were key features."
 							},
 							{
 								"text": "Nomadic lifestyle",
@@ -158,14 +158,14 @@
 						"question": "What is mercantilism?",
 						"answers": [
 							{
-								"text": "Economic system where colonies benefit the mother country",
-								"isCorrect": true,
-								"reason": "Mercantilism enriched European nations."
-							},
-							{
 								"text": "Free trade",
 								"isCorrect": false,
 								"reason": "It limited trade."
+							},
+							{
+								"text": "Economic system where colonies benefit the mother country",
+								"isCorrect": true,
+								"reason": "Mercantilism enriched European nations."
 							},
 							{
 								"text": "Communism",
@@ -183,11 +183,6 @@
 						"question": "What increased tensions between Britain and the colonies?",
 						"answers": [
 							{
-								"text": "Taxes and lack of representation",
-								"isCorrect": true,
-								"reason": "Colonists protested British control."
-							},
-							{
 								"text": "Too much independence",
 								"isCorrect": false,
 								"reason": "Colonists had limited power."
@@ -201,6 +196,11 @@
 								"text": "Religious freedom",
 								"isCorrect": false,
 								"reason": "This was not the issue."
+							},
+							{
+								"text": "Taxes and lack of representation",
+								"isCorrect": true,
+								"reason": "Colonists protested British control."
 							}
 						]
 					}
@@ -214,14 +214,14 @@
 						"question": "What was a major cause of the American Revolution?",
 						"answers": [
 							{
-								"text": "Taxation without representation",
-								"isCorrect": true,
-								"reason": "Colonists had no voice in Parliament."
-							},
-							{
 								"text": "Religious persecution",
 								"isCorrect": false,
 								"reason": "Religion was not the main cause."
+							},
+							{
+								"text": "Taxation without representation",
+								"isCorrect": true,
+								"reason": "Colonists had no voice in Parliament."
 							},
 							{
 								"text": "Industrialization",
@@ -239,11 +239,6 @@
 						"question": "What protest destroyed British tea?",
 						"answers": [
 							{
-								"text": "Boston Tea Party",
-								"isCorrect": true,
-								"reason": "Colonists dumped tea into the harbor."
-							},
-							{
 								"text": "Stamp Act Congress",
 								"isCorrect": false,
 								"reason": "This was a meeting."
@@ -252,6 +247,11 @@
 								"text": "First Continental Congress",
 								"isCorrect": false,
 								"reason": "This was political."
+							},
+							{
+								"text": "Boston Tea Party",
+								"isCorrect": true,
+								"reason": "Colonists dumped tea into the harbor."
 							},
 							{
 								"text": "Tea Act",
@@ -264,14 +264,14 @@
 						"question": "Which battle was the turning point of the war?",
 						"answers": [
 							{
-								"text": "Battle of Saratoga",
-								"isCorrect": true,
-								"reason": "It led to French support."
-							},
-							{
 								"text": "Lexington and Concord",
 								"isCorrect": false,
 								"reason": "These were the first battles."
+							},
+							{
+								"text": "Battle of Saratoga",
+								"isCorrect": true,
+								"reason": "It led to French support."
 							},
 							{
 								"text": "Yorktown",
@@ -289,14 +289,14 @@
 						"question": "Who wrote the Declaration of Independence?",
 						"answers": [
 							{
-								"text": "Thomas Jefferson",
-								"isCorrect": true,
-								"reason": "He was the main author."
-							},
-							{
 								"text": "George Washington",
 								"isCorrect": false,
 								"reason": "He led the army."
+							},
+							{
+								"text": "Thomas Jefferson",
+								"isCorrect": true,
+								"reason": "He was the main author."
 							},
 							{
 								"text": "John Adams",
@@ -339,14 +339,14 @@
 						"question": "What treaty ended the Revolutionary War?",
 						"answers": [
 							{
-								"text": "Treaty of Paris",
-								"isCorrect": true,
-								"reason": "It recognized U.S. independence."
-							},
-							{
 								"text": "Treaty of Versailles",
 								"isCorrect": false,
 								"reason": "This ended WWI."
+							},
+							{
+								"text": "Treaty of Paris",
+								"isCorrect": true,
+								"reason": "It recognized U.S. independence."
 							},
 							{
 								"text": "Stamp Act",
@@ -370,11 +370,6 @@
 						"question": "Why did the Articles of Confederation fail?",
 						"answers": [
 							{
-								"text": "Weak central government",
-								"isCorrect": true,
-								"reason": "The national government had little power."
-							},
-							{
 								"text": "Too many taxes",
 								"isCorrect": false,
 								"reason": "It could not tax."
@@ -388,6 +383,11 @@
 								"text": "Too much trade control",
 								"isCorrect": false,
 								"reason": "It lacked trade power."
+							},
+							{
+								"text": "Weak central government",
+								"isCorrect": true,
+								"reason": "The national government had little power."
 							}
 						]
 					},
@@ -420,14 +420,14 @@
 						"question": "How many branches of government are there?",
 						"answers": [
 							{
-								"text": "Three",
-								"isCorrect": true,
-								"reason": "Legislative, executive, and judicial."
-							},
-							{
 								"text": "One",
 								"isCorrect": false,
 								"reason": "Power is divided."
+							},
+							{
+								"text": "Three",
+								"isCorrect": true,
+								"reason": "Legislative, executive, and judicial."
 							},
 							{
 								"text": "Two",
@@ -445,11 +445,6 @@
 						"question": "What is federalism?",
 						"answers": [
 							{
-								"text": "Sharing power between states and federal government",
-								"isCorrect": true,
-								"reason": "Power is divided."
-							},
-							{
 								"text": "State control only",
 								"isCorrect": false,
 								"reason": "Federal government also has power."
@@ -458,6 +453,11 @@
 								"text": "King rule",
 								"isCorrect": false,
 								"reason": "The U.S. rejected monarchy."
+							},
+							{
+								"text": "Sharing power between states and federal government",
+								"isCorrect": true,
+								"reason": "Power is divided."
 							},
 							{
 								"text": "Military rule",
@@ -470,14 +470,14 @@
 						"question": "Why was the Bill of Rights added?",
 						"answers": [
 							{
-								"text": "To protect individual freedoms",
-								"isCorrect": true,
-								"reason": "It guarantees civil liberties."
-							},
-							{
 								"text": "To raise taxes",
 								"isCorrect": false,
 								"reason": "Not its purpose."
+							},
+							{
+								"text": "To protect individual freedoms",
+								"isCorrect": true,
+								"reason": "It guarantees civil liberties."
 							},
 							{
 								"text": "To strengthen the army",
@@ -501,11 +501,6 @@
 						"question": "What was the Louisiana Purchase?",
 						"answers": [
 							{
-								"text": "Land bought from France in 1803",
-								"isCorrect": true,
-								"reason": "The U.S. doubled its size by purchasing land from France."
-							},
-							{
 								"text": "Land taken from Spain",
 								"isCorrect": false,
 								"reason": "It was purchased from France."
@@ -514,6 +509,11 @@
 								"text": "Land won in war",
 								"isCorrect": false,
 								"reason": "It was bought peacefully."
+							},
+							{
+								"text": "Land bought from France in 1803",
+								"isCorrect": true,
+								"reason": "The U.S. doubled its size by purchasing land from France."
 							},
 							{
 								"text": "A treaty with Britain",
@@ -551,14 +551,14 @@
 						"question": "What was the Trail of Tears?",
 						"answers": [
 							{
-								"text": "Forced removal of Native Americans",
-								"isCorrect": true,
-								"reason": "Thousands died during relocation."
-							},
-							{
 								"text": "A trade route",
 								"isCorrect": false,
 								"reason": "It was not voluntary."
+							},
+							{
+								"text": "Forced removal of Native Americans",
+								"isCorrect": true,
+								"reason": "Thousands died during relocation."
 							},
 							{
 								"text": "A gold trail",
@@ -576,11 +576,6 @@
 						"question": "Why did pioneers travel west?",
 						"answers": [
 							{
-								"text": "Land and opportunity",
-								"isCorrect": true,
-								"reason": "Many sought farms and wealth."
-							},
-							{
 								"text": "Escape laws",
 								"isCorrect": false,
 								"reason": "Laws were not the cause."
@@ -589,6 +584,11 @@
 								"text": "Religious freedom only",
 								"isCorrect": false,
 								"reason": "There were multiple reasons."
+							},
+							{
+								"text": "Land and opportunity",
+								"isCorrect": true,
+								"reason": "Many sought farms and wealth."
 							},
 							{
 								"text": "Government orders",
@@ -631,11 +631,6 @@
 						"question": "What caused sectionalism?",
 						"answers": [
 							{
-								"text": "Differences between North and South",
-								"isCorrect": true,
-								"reason": "Economic and social differences divided regions."
-							},
-							{
 								"text": "Foreign wars",
 								"isCorrect": false,
 								"reason": "This was internal conflict."
@@ -649,17 +644,17 @@
 								"text": "Immigration",
 								"isCorrect": false,
 								"reason": "Not the main cause."
+							},
+							{
+								"text": "Differences between North and South",
+								"isCorrect": true,
+								"reason": "Economic and social differences divided regions."
 							}
 						]
 					},
 					{
 						"question": "What issue led to the Civil War?",
 						"answers": [
-							{
-								"text": "Slavery",
-								"isCorrect": true,
-								"reason": "Disagreements over slavery caused the war."
-							},
 							{
 								"text": "Trade disputes",
 								"isCorrect": false,
@@ -669,6 +664,11 @@
 								"text": "Taxation",
 								"isCorrect": false,
 								"reason": "Not the main issue."
+							},
+							{
+								"text": "Slavery",
+								"isCorrect": true,
+								"reason": "Disagreements over slavery caused the war."
 							},
 							{
 								"text": "Religion",
@@ -681,14 +681,14 @@
 						"question": "Who was president during most of the Civil War?",
 						"answers": [
 							{
-								"text": "Abraham Lincoln",
-								"isCorrect": true,
-								"reason": "He led the Union."
-							},
-							{
 								"text": "Andrew Johnson",
 								"isCorrect": false,
 								"reason": "He became president later."
+							},
+							{
+								"text": "Abraham Lincoln",
+								"isCorrect": true,
+								"reason": "He led the Union."
 							},
 							{
 								"text": "Ulysses S. Grant",

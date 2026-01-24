@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -17,21 +17,33 @@
 			<li>
 				<a
 					href="index.html"
-					onclick="return confirm('Leaving will reset unsaved lesson progress. Are you sure?')"
+					onclick="
+						return confirm(
+							'Leaving will reset unsaved lesson progress. Are you sure?',
+						);
+					"
 					>Home</a
 				>
 			</li>
 			<li>
 				<a
 					href="profile.html"
-					onclick="return confirm('Leaving will reset unsaved lesson progress. Are you sure?')"
+					onclick="
+						return confirm(
+							'Leaving will reset unsaved lesson progress. Are you sure?',
+						);
+					"
 					>Profile</a
 				>
 			</li>
 			<li>
 				<a
 					href="dashboard.html"
-					onclick="return confirm('Leaving will reset unsaved lesson progress. Are you sure?')"
+					onclick="
+						return confirm(
+							'Leaving will reset unsaved lesson progress. Are you sure?',
+						);
+					"
 					>Dashboard</a
 				>
 			</li>
@@ -46,6 +58,8 @@
 				<p id="current-score">Current Score: 0</p>
 
 				<h2 class="lesson-question" id="lesson-question">Loading...</h2>
+				<h3 class="result-message" id="result-message"></h3>
+
 				<p id="question-source"></p>
 
 				<div class="lesson-answers" id="lesson-answers">
@@ -59,7 +73,7 @@
 					<button
 						class="exit-button"
 						id="exit-button"
-						onclick="window.location.href='category.html'"
+						onclick="window.location.href = 'category.html'"
 					>
 						Exit Lesson
 					</button>
