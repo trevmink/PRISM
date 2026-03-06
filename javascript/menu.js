@@ -131,8 +131,69 @@ async function loadUserCategories() {
 			continueBtn.onclick = () => continueCategory(category);
 		} else {
 			console.warn(
-				`No .continue-button found inside card for category: ${category}`
+				`No .continue-button found inside card for category: ${category}`,
 			);
 		}
 	});
 }
+
+document.querySelectorAll(".add-category").forEach((button) => {
+	button.addEventListener("click", () => {
+		const container = button.closest(".category-container");
+
+		const menu = container.querySelector(".menu");
+
+		// hide the + button
+		button.style.display = "none";
+
+		// show the dropdown menu
+		menu.style.display = "block";
+	});
+});
+
+document.querySelectorAll(".category-select").forEach((select) => {
+	select.addEventListener("change", async (e) => {
+		const categoryKey = e.target.value;
+		const container = select.closest(".category-container");
+
+		const menu = container.querySelector(".menu");
+		const card = container.querySelector(".category-card");
+		const addBtn = container.querySelector(".add-category");
+		const continueBtn = container.querySelector(".continue-button");
+
+		if (!currentUser) return;
+
+		const userRef = doc(db, "users", currentUser.uid);
+
+		try {
+			// save category in firestore
+			await updateDoc(userRef, {
+				[`categories.${categoryKey}`]: {
+					selected: false,
+				},
+			});
+
+			console.log("Category added:", categoryKey);
+		} catch (err) {
+			console.error("Failed to save category:", err);
+			return;
+		}
+
+		// attach category to container
+		container.dataset.category = categoryKey;
+
+		// hide dropdown
+		menu.style.display = "none";
+
+		// show card
+		card.style.display = "block";
+
+		// hide +
+		addBtn.style.display = "none";
+
+		// wire continue button
+		if (continueBtn) {
+			continueBtn.onclick = () => continueCategory(categoryKey);
+		}
+	});
+});

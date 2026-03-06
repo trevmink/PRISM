@@ -49,7 +49,6 @@ onAuthStateChanged(auth, async (user) => {
 	// Load title map so strengths/weaknesses can use real lesson titles
 	const lessonsJson = await loadUSHistoryLessons();
 	const titleMap = buildLessonTitleMap(lessonsJson);
-	updateStrengthWeaknessDescriptions(perfMap, titleMap);
 
 	console.log("Selected category:", selectedCategory);
 
@@ -62,6 +61,8 @@ onAuthStateChanged(auth, async (user) => {
 			console.error("Unit not found for id:", unitId);
 			return;
 		}
+
+		updateStrengthWeaknessDescriptions(perfMap, titleMap, unitId);
 
 		unitTitle.textContent = `U.S. History - ${unit.title}`; // sets the unit title based on selected unit
 		createLessonButtons(unit, perfMap);
@@ -200,10 +201,11 @@ function buildLessonTitleMap(lessonsJson) {
 	return map;
 }
 
-function updateStrengthWeaknessDescriptions(perfMap, titleMap) {
-	const entries = Object.entries(perfMap || {}).filter(
-		([, perf]) => perf?.completed,
-	);
+function updateStrengthWeaknessDescriptions(perfMap, titleMap, unitId) {
+	const entries = Object.entries(perfMap || {}).filter(([key, perf]) => {
+		const parsed = parseUnitLessonKey(key);
+		return perf?.completed && parsed && parsed.unitId === unitId;
+	});
 
 	if (entries.length === 0) {
 		if (strengthsDescEl)
