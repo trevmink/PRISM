@@ -4,7 +4,7 @@
 
 **Personalized Learning for Every Student**
 
-Prism is an adaptive learning platform I independently designed and developed as my senior-year computer science project. It personalizes practice based on each student's performance, tracks learning progress, identifies areas of weakness, and provides targeted practice to help students improve.
+Prism is an adaptive learning platform I independently designed and developed as my high school senior-year computer science project. It personalizes practice based on each student's performance, tracks learning progress, identifies areas of weakness, and provides targeted practice to help students improve.
 
 ---
 
