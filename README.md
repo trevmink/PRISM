@@ -4,13 +4,13 @@
 
 **Personalized Learning for Every Student**
 
-Prism is an adaptive learning platform that personalizes practice based on each student's performance. It tracks learning progress, identifies areas of weakness, and provides targeted practice to help students improve.
+Prism is an adaptive learning platform I independently designed and developed as my senior-year computer science project. It personalizes practice based on each student's performance, tracks learning progress, identifies areas of weakness, and provides targeted practice to help students improve.
 
 ---
 
 ## Overview
 
-Traditional education often follows a one-size-fits-all model that can overlook individual differences in student performance. Prism explores an alternative approach by using performance-based adaptive logic to create more personalized learning experiences.
+Traditional education often follows a one-size-fits-all model that can overlook individual differences in student performance. Prism uses performance-based adaptive logic to create a more personalized learning experience.
 
 Rather than giving every student the same practice, Prism analyzes their performance and directs additional practice toward areas where they demonstrate difficulty.
 > **Note:** Prism is a completed project but is not currently deployed as a publicly accessible web application.
@@ -32,7 +32,7 @@ Rather than giving every student the same practice, Prism analyzes their perform
 
 Prism uses a **rule-based adaptive learning system** to identify areas where students may need additional practice.
 
-After completing a lesson, Prism records the student's performance. Lessons with lower performance are identified as weak areas and can be included in a targeted **Weak Skills Practice** session.
+After completing a lesson, Prism records the student's performance. Lessons with performance below the adaptive threshold are identified as weak areas and can be included in a targeted **Weak Skills Practice** session.
 
 ```text
 Student completes a lesson
@@ -90,6 +90,25 @@ Educational content is stored separately from the application's core logic, maki
 
 ---
 
+## Screenshots
+
+### Dashboard
+![Prism Dashboard](category-dash.png)
+
+### Units
+![Prism Units](units.png)
+
+### Lesson Dashboard
+![Prism Lesson Dashboard](lesson-dash.png)
+
+### Weak Skills Practice
+![Prism Weak Skills Practice](weak-skills.png)
+
+### Login
+![Prism Login](login.png)
+
+---
+
 ## Project Structure
 
 ```text
@@ -123,8 +142,6 @@ Firestore security rules restrict users to reading and writing their own private
 
 ## Development
 
-Prism was developed as a senior-year computer science project.
-
 The project involved designing and implementing:
 
 * A web-based learning platform
@@ -157,4 +174,4 @@ Potential future improvements include:
 
 **Trevor Minkiewicz**
 
-Prism was developed as a senior-year computer science project.
+Prism was independently designed and developed as a high school senior-year computer science project.
